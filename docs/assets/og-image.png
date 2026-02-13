@@ -1,0 +1,82 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background with gradient -->
+  <rect width="1200" height="630" fill="url(#bgGradient)"/>
+  
+  <!-- Pattern overlay -->
+  <circle cx="100" cy="100" r="2" fill="white" opacity="0.1"/>
+  <circle cx="150" cy="100" r="2" fill="white" opacity="0.1"/>
+  <circle cx="200" cy="100" r="2" fill="white" opacity="0.1"/>
+  <circle cx="100" cy="150" r="2" fill="white" opacity="0.1"/>
+  <circle cx="150" cy="150" r="2" fill="white" opacity="0.1"/>
+  <circle cx="200" cy="150" r="2" fill="white" opacity="0.1"/>
+  
+  <circle cx="1000" cy="500" r="2" fill="white" opacity="0.1"/>
+  <circle cx="1050" cy="500" r="2" fill="white" opacity="0.1"/>
+  <circle cx="1100" cy="500" r="2" fill="white" opacity="0.1"/>
+  <circle cx="1000" cy="550" r="2" fill="white" opacity="0.1"/>
+  <circle cx="1050" cy="550" r="2" fill="white" opacity="0.1"/>
+  <circle cx="1100" cy="550" r="2" fill="white" opacity="0.1"/>
+  
+  <!-- Main Content -->
+  <g transform="translate(100, 150)">
+    <!-- Logo -->
+    <circle cx="50" cy="50" r="50" fill="white" opacity="0.15"/>
+    <rect x="30" y="35" width="30" height="20" rx="2" fill="white"/>
+    <rect x="47" y="40" width="3" height="10" rx="1" fill="#1D4ED8"/>
+    <rect x="42" y="44" width="13" height="3" rx="1" fill="#1D4ED8"/>
+    
+    <!-- Title -->
+    <text x="120" y="65" font-family="system-ui, -apple-system, sans-serif" font-size="72" font-weight="900" fill="white">
+      CliniCard
+    </text>
+    
+    <!-- Subtitle -->
+    <text x="0" y="150" font-family="system-ui, -apple-system, sans-serif" font-size="42" font-weight="600" fill="white" opacity="0.95">
+      Révision Médicale Intelligente
+    </text>
+    
+    <text x="0" y="210" font-family="system-ui, -apple-system, sans-serif" font-size="32" font-weight="500" fill="white" opacity="0.9">
+      Transformez vos cours en flashcards et QCM avec l'IA
+    </text>
+    
+    <!-- Badge -->
+    <rect x="0" y="240" width="200" height="45" rx="23" fill="white" opacity="0.2"/>
+    <text x="100" y="270" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="white" text-anchor="middle">
+      ✨ Propulsé par l'IA
+    </text>
+  </g>
+  
+  <!-- Stats Section -->
+  <g transform="translate(750, 250)">
+    <!-- Stat 1 -->
+    <rect x="0" y="0" width="180" height="100" rx="16" fill="white" opacity="0.15"/>
+    <text x="90" y="50" font-family="system-ui, -apple-system, sans-serif" font-size="42" font-weight="900" fill="white" text-anchor="middle">
+      10k+
+    </text>
+    <text x="90" y="80" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="600" fill="white" text-anchor="middle" opacity="0.9">
+      Flashcards créées
+    </text>
+    
+    <!-- Stat 2 -->
+    <rect x="200" y="0" width="180" height="100" rx="16" fill="white" opacity="0.15"/>
+    <text x="290" y="50" font-family="system-ui, -apple-system, sans-serif" font-size="42" font-weight="900" fill="white" text-anchor="middle">
+      500+
+    </text>
+    <text x="290" y="80" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="600" fill="white" text-anchor="middle" opacity="0.9">
+      Étudiants actifs
+    </text>
+  </g>
+  
+  <!-- Decorative elements -->
+  <circle cx="950" cy="150" r="60" fill="white" opacity="0.05"/>
+  <circle cx="200" cy="500" r="80" fill="white" opacity="0.05"/>
+  
+  <!-- Gradient Definition -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#1D4ED8"/>
+      <stop offset="50%" stop-color="#3B82F6"/>
+      <stop offset="100%" stop-color="#60A5FA"/>
+    </linearGradient>
+  </defs>
+</svg>
