@@ -875,4 +875,85 @@
   @media (prefers-reduced-motion: reduce){
     *{ transition: none !important; scroll-behavior: auto !important; }
   }
-  
+  /* =========================
+   HERO ALIGN FIX (final)
+   Mets ce bloc TOUT EN BAS du CSS
+   ========================= */
+
+/* 1) Un seul layout hero clair, sans contradictions */
+.hero{
+  padding: 52px 0 40px;
+}
+
+.hero-content{
+  display: grid;
+  grid-template-columns: 1fr minmax(320px, 420px); /* gauche flexible, droite stable */
+  gap: 44px;
+  align-items: center; /* aligne verticalement texte + phone */
+}
+
+/* 2) Colonne gauche : limite de largeur propre */
+.hero-text{
+  max-width: 640px;
+}
+
+/* 3) Colonne droite : phone collé à droite, pas au milieu */
+.hero-visual{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  margin-top: 0;
+  animation: none; /* IMPORTANT : évite le “décalage” visuel du layout */
+}
+
+/* Si tu veux garder un petit flottement, anime le phone, pas le conteneur */
+.phone-mockup{
+  width: 100%;
+  max-width: 400px;
+  filter: drop-shadow(0 30px 80px rgba(0,0,0,0.65));
+  animation: floating 6s ease-in-out infinite;
+  transform-origin: center;
+}
+
+@keyframes floating {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+/* 4) Fix CSS pur (tu avais du SCSS avec &::after) */
+.phone-screen{
+  position: relative; /* nécessaire pour le ::after */
+}
+
+.phone-screen::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, transparent 40%);
+  pointer-events: none;
+  z-index: 5;
+}
+
+/* 5) Ton carousel/slide en contain OK, mais on sécurise */
+.phone-slide img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+/* 6) Responsive */
+@media (max-width: 980px){
+  .hero-content{
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+  .hero-visual{
+    justify-content: center;
+    order: -1;
+  }
+  .phone-mockup{
+    max-width: 380px;
+  }
+}
