@@ -973,6 +973,6 @@
 /* Mobile: on recentre */
 @media (max-width: 980px){
   .hero-visual{
-    padding-top: 0;
+    padding-top: 26px !important;
   }
 }
