@@ -134,16 +134,7 @@
     opacity: .35;
     pointer-events:none;
   }
-  
-  .hero-content{
-    position:relative;
-    z-index: 1;
-    display:grid;
-    grid-template-columns: 1.05fr 0.95fr;
-    gap: 34px;
-    align-items:center;
-  }
-  
+
   .badge{
     display:inline-flex;
     align-items:center;
@@ -214,12 +205,7 @@
     background: rgba(255,255,255,0.09);
   }
   
-  .hero-stats{
-    margin-top: 22px;
-    display:grid;
-    grid-template-columns: repeat(3, minmax(0,1fr));
-    gap: 12px;
-  }
+
   .stat{
     padding: 12px 12px;
     border-radius: 16px;
@@ -733,22 +719,11 @@
   grid-template-columns: 1.15fr 0.85fr;
 }
 
-.hero-text{
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
 
 /* CTA un peu plus aéré */
 .hero-cta{ margin-top: 26px; }
 
 /* IMPORTANT : stats en bas + plus grandes */
-.hero-stats{
-  margin-top: auto;              /* pousse le bloc vers le bas */
-  padding-top: 26px;             /* “respiration” entre boutons et stats */
-  grid-template-columns: repeat(2, minmax(0,1fr)); /* 2 colonnes au lieu de 3 */
-  gap: 14px;
-}
 
 .hero-stats .stat:nth-child(3){
   grid-column: 1 / -1;           /* la 3e carte prend toute la ligne */
@@ -867,6 +842,18 @@
   transform: scale(1.02);
 }
 
+.hero-content{
+  align-items: flex-start; /* au lieu de stretch */
+}
+
+.hero-text{
+  height: auto;            /* enlève l'effet colonne pleine hauteur */
+}
+
+.hero-stats{
+  margin-top: 22px;        /* au lieu de auto */
+  padding-top: 0;          /* enlève l'espace artificiel */
+}
 
   
   /* ---------------- Responsive ---------------- */
