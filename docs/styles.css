@@ -805,18 +805,6 @@
   border-radius: 44px;
 }
 
-.phone-screen {
-  border-radius: 36px;
-  /* On ajoute un reflet sur l'écran */
-  &::after {
-      content: "";
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, transparent 40%);
-      pointer-events: none;
-      z-index: 5;
-  }
-}
 
 /* Animation de flottement pour le téléphone */
 .hero-visual {
@@ -960,19 +948,7 @@
 
 /* ===== HERO FIX: phone trop bas (desktop) ===== */
 @media (min-width: 981px){
-  .hero-content{
-    align-items: flex-start !important;  /* au lieu de center */
-  }
-
   .hero-visual{
-    align-self: flex-start !important;   /* colle le phone en haut */
-    padding-top: 14px;                   /* petit ajustement (tweak 10-24px) */
-  }
-}
-
-/* Mobile: on recentre */
-@media (max-width: 980px){
-  .hero-visual{
-    padding-top: 26px !important;
+    padding-top: 22px !important; /* ajuste 16–28px */
   }
 }
