@@ -3,18 +3,17 @@
 // Smooth scroll with offset for fixed header
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
-    if (target) {
-      const headerOffset = 80;
-      const elementPosition = target.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+    const href = this.getAttribute('href');
+    if (!href || href === "#" || href.length < 2) return; // ignore "#"
+    const target = document.querySelector(href);
+    if (!target) return;
 
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth'
-      });
-    }
+    e.preventDefault();
+    const headerOffset = 80;
+    const elementPosition = target.getBoundingClientRect().top;
+    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+    window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
   });
 });
 
@@ -114,27 +113,58 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // Store button click tracking (for analytics)
-document.querySelectorAll('.store-button').forEach(button => {
-  button.addEventListener('click', (e) => {
-    e.preventDefault();
-    const store = button.classList.contains('store-ios') ? 'App Store' : 'Google Play';
-    console.log(`Clicked: ${store} - Coming soon!`);
-    
-    // Show temporary message
-    const note = document.querySelector('.download-note p');
-    const originalText = note.textContent;
-    note.textContent = `🎯 ${store} - Lancement très bientôt ! Restez connectés.`;
-    note.style.background = 'linear-gradient(135deg, #1D4ED8 0%, #3B82F6 100%)';
-    note.style.color = 'white';
-    
-    setTimeout(() => {
-      note.textContent = originalText;
-      note.style.background = '';
-      note.style.color = '';
-    }, 3000);
+// Store buttons behavior (soft launch friendly)
+const IS_PUBLIC_LAUNCH = false; // <-- passe à true quand tu ouvres au public
+const APP_STORE_URL = "https://apps.apple.com/app/id6758679816";
+
+const IOS_EARLY_ACCESS_MAILTO =
+  "mailto:clinicardapp@gmail.com" +
+  "?subject=Acc%C3%A8s%20anticip%C3%A9%20CliniCard" +
+  "&body=Bonjour%2C%0A%0AJe%20souhaite%20rejoindre%20l'acc%C3%A8s%20anticip%C3%A9%20CliniCard.%0A%0A-%20Fili%C3%A8re%20(PASS%2FLAS%2FDFGSM%2FAutre)%20%3A%0A-%20Acad%C3%A9mie%2Fville%20%3A%0A-%20Ce%20que%20je%20veux%20r%C3%A9viser%20%3A%0A%0AMerci%20!";
+
+document.addEventListener("DOMContentLoaded", () => {
+  const iosBtn = document.querySelector(".store-button.store-ios");
+  const androidBtn = document.querySelector(".store-button.store-android");
+
+  // Configure iOS link + label depending on soft launch / public launch
+  if (iosBtn) {
+    iosBtn.href = IS_PUBLIC_LAUNCH ? APP_STORE_URL : IOS_EARLY_ACCESS_MAILTO;
+    const label = iosBtn.querySelector(".store-label");
+    const name = iosBtn.querySelector(".store-name");
+    if (label) label.textContent = IS_PUBLIC_LAUNCH ? "Disponible sur" : "Accès anticipé";
+    if (name) name.textContent = IS_PUBLIC_LAUNCH ? "App Store" : "iOS (sur invitation)";
+  }
+
+  // Android stays "coming soon"
+  if (androidBtn) {
+    androidBtn.href = "#";
+  }
+
+  // Click behavior:
+  // - iOS: allow navigation (mailto or App Store)
+  // - Android: show message
+  document.querySelectorAll(".store-button").forEach((button) => {
+    button.addEventListener("click", (e) => {
+      const isAndroid = button.classList.contains("store-android");
+      if (!isAndroid) return; // iOS => let it work
+
+      e.preventDefault();
+      const note = document.querySelector(".download-note");
+      if (!note) return;
+
+      const originalHTML = note.innerHTML;
+      note.innerHTML = "🎯 Android arrive bientôt. Laisse ton email / contacte-nous pour être prévenu.";
+      note.style.background = "linear-gradient(135deg, #1D4ED8 0%, #3B82F6 100%)";
+      note.style.color = "white";
+
+      setTimeout(() => {
+        note.innerHTML = originalHTML;
+        note.style.background = "";
+        note.style.color = "";
+      }, 3500);
+    });
   });
 });
-
 // Mobile menu toggle (for future implementation)
 const initMobileMenu = () => {
   // Placeholder for mobile menu functionality
