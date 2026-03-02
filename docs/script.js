@@ -114,7 +114,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Store button click tracking (for analytics)
 // Store buttons behavior (soft launch friendly)
-const IS_PUBLIC_LAUNCH = false; // <-- passe à true quand tu ouvres au public
+const IS_PUBLIC_LAUNCH = true; // <-- passe à true quand tu ouvres au public
 const APP_STORE_URL = "https://apps.apple.com/app/id6758679816";
 
 const IOS_EARLY_ACCESS_MAILTO =
