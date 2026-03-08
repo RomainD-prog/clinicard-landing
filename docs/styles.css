@@ -441,21 +441,42 @@ a { color: inherit; text-decoration: none; }
   position: absolute;
   inset: 0;
   opacity: 0;
-  transition: opacity 500ms ease;
+  transform: scale(1.015);
+  transition: opacity 550ms ease, transform 550ms ease;
   overflow: hidden;
 }
 
-.phone-slide.is-active { opacity: 1; }
+.phone-slide.is-active {
+  opacity: 1;
+  transform: scale(1);
+}
 
 .phone-slide::before {
   content: "";
   position: absolute;
-  inset: -20px;
+  inset: -30px;
   background-image: var(--bg);
   background-size: cover;
   background-position: center;
-  filter: blur(18px);
-  opacity: 0.3;
+  filter: blur(28px) saturate(1.15) brightness(0.88);
+  opacity: 0.92;
+  transform: scale(1.08);
+}
+
+/* Top + bottom vignette for depth */
+.phone-slide::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to bottom,
+      rgba(10, 16, 30, 0.35) 0%,
+      transparent 18%,
+      transparent 80%,
+      rgba(10, 16, 30, 0.40) 100%
+    );
+  pointer-events: none;
+  z-index: 2;
 }
 
 .phone-slide img {
@@ -466,6 +487,7 @@ a { color: inherit; text-decoration: none; }
   object-fit: contain;
   object-position: center;
   display: block;
+  filter: brightness(1.02) contrast(0.99);
 }
 
 .phone-nav {
