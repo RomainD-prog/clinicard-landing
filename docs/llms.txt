@@ -1,0 +1,39 @@
+# CliniCard
+
+> Application iOS gratuite de révision médicale pour les étudiants en PASS, LAS, EDN/ECOS et ECN. CliniCard génère automatiquement des flashcards et QCM à partir de vos cours PDF, avec répétition espacée intégrée.
+
+CliniCard est une application mobile (iOS) destinée aux étudiants en médecine en France. Elle permet de transformer des cours au format PDF en flashcards et QCM orientés concours, en s'appuyant sur la répétition espacée (méthode des J) pour ancrer les connaissances en mémoire à long terme.
+
+## Fonctionnalités principales
+
+- Génération automatique de flashcards à partir de vos cours PDF
+- QCM dans le style des concours PASS, LAS, EDN/ECOS
+- Répétition espacée (méthode des J : J0, J1, J3, J7, J15, J30)
+- Annales et suivi de progression
+- Gratuit, disponible sur iOS (App Store)
+
+## Public cible
+
+Étudiants en médecine en France :
+- PASS (Parcours d'Accès Spécifique Santé)
+- LAS (Licence avec Accès Santé)
+- EDN (Épreuves Dématérialisées Nationales)
+- ECOS (Examen Clinique Objectif Structuré)
+- ECN (Épreuves Classantes Nationales)
+
+## Pourquoi CliniCard
+
+Les flashcards génériques ne correspondent pas à vos cours. CliniCard génère des questions à partir du contenu exact de votre PDF, dans les formulations de votre faculté — ce que la recherche appelle le *transfer-appropriate processing* : mémoriser dans les mêmes termes que ceux appris améliore significativement la rétention.
+
+## Liens
+
+- Page d'accueil : https://clinicard.fr/
+- Télécharger sur l'App Store : https://apps.apple.com/app/id6758679816
+- Blog (méthodes de révision) : https://clinicard.fr/blog/
+- Méthode des J en médecine : https://clinicard.fr/blog/methode-des-j-repetition-espacee-medecine.html
+- Quelle moyenne pour faire médecine (PASS/LAS) : https://clinicard.fr/blog/quelle-moyenne-pour-faire-medecine-pass.html
+- Politique de confidentialité : https://clinicard.fr/privacy-policy.html
+
+## Contact
+
+Email : clinicardapp@gmail.com

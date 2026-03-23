@@ -117,6 +117,28 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+// Hamburger menu
+const hamburger = document.querySelector('.nav-hamburger');
+const navMobile = document.querySelector('.nav-mobile');
+if (hamburger && navMobile) {
+  hamburger.addEventListener('click', () => {
+    const isOpen = hamburger.classList.toggle('is-open');
+    navMobile.classList.toggle('is-open', isOpen);
+    hamburger.setAttribute('aria-expanded', isOpen);
+    navMobile.setAttribute('aria-hidden', !isOpen);
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+  });
+  navMobile.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('is-open');
+      navMobile.classList.remove('is-open');
+      hamburger.setAttribute('aria-expanded', 'false');
+      navMobile.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    });
+  });
+}
+
 // Dynamic footer year
 const yearEl = document.querySelector('.footer-bottom p');
 if (yearEl) yearEl.textContent = `© ${new Date().getFullYear()} CliniCard. Tous droits réservés.`;

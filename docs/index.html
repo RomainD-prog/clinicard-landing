@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="CliniCard transforme vos cours (PDF) en flashcards et QCM orientés concours. Révision efficace avec répétition espacée, annales et suivi de progression. Pour PASS, LAS, EDN/ECOS, ECN et filières santé.">
+    <meta name="description" content="CliniCard transforme vos cours PDF en flashcards et QCM orientés concours, avec répétition espacée. Application iOS gratuite pour PASS, LAS, EDN/ECOS.">
     <meta name="keywords" content="flashcards médecine, qcm médecine, révision pass, révision las, edn ecos, ecn, annales, répétition espacée, application révision médecine, concours santé, fiches médecine, apprendre médecine">
-    <title>CliniCard — Flashcards & QCM pour Médecine | PASS, LAS, EDN/ECOS</title>
+    <title>CliniCard — Flashcards &amp; QCM pour Médecine | PASS, LAS, EDN</title>
     <meta name="author" content="CliniCard">
+    <link rel="canonical" href="https://clinicard.fr/">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
@@ -34,19 +35,56 @@
 
     <!-- Structured Data / Schema.org -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "MobileApplication",
-      "name": "CliniCard",
-      "applicationCategory": "EducationalApplication",
-      "operatingSystem": "iOS",
-      "description": "Application de révision médicale orientée concours : vos cours (PDF) en flashcards et QCM, avec répétition espacée, annales et suivi de progression.",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "EUR"
+    [
+      {
+        "@context": "https://schema.org",
+        "@type": "MobileApplication",
+        "name": "CliniCard",
+        "applicationCategory": "EducationalApplication",
+        "operatingSystem": "iOS",
+        "description": "Application iOS gratuite de révision médicale pour PASS, LAS, EDN/ECOS. Génère automatiquement des flashcards et QCM à partir de vos cours PDF, avec répétition espacée intégrée.",
+        "url": "https://clinicard.fr",
+        "downloadUrl": "https://apps.apple.com/app/id6758679816",
+        "inLanguage": "fr",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "EUR"
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "CliniCard",
+          "url": "https://clinicard.fr"
+        },
+        "audience": {
+          "@type": "EducationalAudience",
+          "educationalRole": "student"
+        },
+        "keywords": "PASS, LAS, EDN, ECOS, ECN, médecine, flashcards, QCM, répétition espacée, révision"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "CliniCard",
+        "url": "https://clinicard.fr",
+        "logo": "https://clinicard.fr/assets/medflash-logo.png",
+        "description": "CliniCard crée des flashcards et QCM à partir des cours des étudiants en médecine (PASS, LAS, EDN/ECOS) grâce à l'intelligence artificielle.",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "email": "clinicardapp@gmail.com",
+          "contactType": "customer support",
+          "availableLanguage": "French"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "CliniCard",
+        "url": "https://clinicard.fr",
+        "inLanguage": "fr",
+        "description": "Flashcards et QCM générés à partir de vos cours pour réussir en médecine (PASS, LAS, EDN/ECOS)."
       }
-    }
+    ]
     </script>
 
     <link rel="stylesheet" href="styles.css">
@@ -67,7 +105,19 @@
                     <a href="/blog/">Blog</a>
                 </nav>
                 <a href="#telechargement" class="nav-cta">Télécharger</a>
+                <button class="nav-hamburger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav-mobile">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
+        </div>
+        <!-- Mobile navigation overlay -->
+        <div class="nav-mobile" id="nav-mobile" aria-hidden="true">
+            <a href="#fonctionnalites">Fonctionnalités</a>
+            <a href="#pourquoi">Pourquoi CliniCard</a>
+            <a href="/blog/">Blog</a>
+            <a href="#telechargement" class="nav-mobile-cta">Télécharger l'app</a>
         </div>
     </header>
 
