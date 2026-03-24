@@ -91,6 +91,17 @@
 </head>
 
 <body>
+    <!-- Announce bar -->
+    <div class="announce-bar" id="announceBar" role="banner">
+        <div class="announce-inner container">
+            <span class="announce-dot" aria-hidden="true"></span>
+            <p class="announce-text">La version web est en cours de développement — <a href="#plateformes" class="announce-link">En savoir plus</a></p>
+            <button class="announce-close" id="announceClose" aria-label="Fermer l'annonce">
+                <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M1 1l11 11M12 1L1 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </button>
+        </div>
+    </div>
+
     <!-- Header / Navigation -->
     <header class="header">
         <div class="container">
@@ -127,9 +138,15 @@
           <div class="hero-content">
             <div class="hero-text">
 
-              <div class="hero-badge">
-                <span class="hero-badge-dot"></span>
-                Disponible sur iOS
+              <div class="hero-badges">
+                <div class="hero-badge">
+                  <span class="hero-badge-dot"></span>
+                  Disponible sur iOS
+                </div>
+                <div class="hero-badge hero-badge-web">
+                  <span class="hero-badge-dot hero-badge-dot-web"></span>
+                  Web bientôt
+                </div>
               </div>
 
               <h1 class="hero-title">
@@ -349,8 +366,8 @@
                       </svg>
                     </div>
                     <div>
-                        <h4>Révisez partout</h4>
-                        <p>Dans les transports, entre deux cours, avant un TD. Votre bibliothèque médicale dans votre poche.</p>
+                        <h4>Révisez sur tous vos écrans</h4>
+                        <p>iOS disponible maintenant. Version web en développement — révisez bientôt depuis votre ordinateur sans installer d'app.</p>
                     </div>
                 </div>
                 <div class="why-item">
@@ -456,6 +473,67 @@
                     <p><strong>&bull; Mes données ?</strong> Vos données restent privées. Politique : <a href="privacy-policy.html">ici</a>.</p>
                     <p><strong>&bull; Un bug ?</strong> Écrivez-nous : <a href="mailto:clinicardapp@gmail.com">clinicardapp@gmail.com</a>.</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Web Coming Soon Section -->
+    <section id="plateformes" class="web-teaser-section">
+        <div class="container">
+            <div class="web-teaser-inner">
+
+                <div class="web-teaser-text">
+                    <span class="section-label web-label">Prochainement</span>
+                    <h2 class="web-teaser-title">CliniCard<br><em>arrive sur le web.</em></h2>
+                    <p class="web-teaser-sub">Révisez depuis votre ordinateur, sans installer d'app. La même expérience — flashcards, QCM, répétition espacée — dans votre navigateur. Parfait pour les longues sessions de révision au bureau.</p>
+                    <div class="web-teaser-features">
+                        <div class="web-feat">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+                            Accessible depuis n'importe quel navigateur
+                        </div>
+                        <div class="web-feat">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v-1a8 8 0 0116 0v1"/><path d="M2 17c0-2.2 1.8-4 4-4h12c2.2 0 4 1.8 4 4v1H2v-1z"/></svg>
+                            Même compte, mêmes cours, même progression
+                        </div>
+                        <div class="web-feat">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                            Synchronisation iOS ↔ Web en temps réel
+                        </div>
+                    </div>
+                    <a href="mailto:clinicardapp@gmail.com?subject=Notification%20version%20web%20CliniCard&body=Bonjour%2C%0A%0AJe%20souhaite%20%C3%AAtre%20notifi%C3%A9(e)%20lors%20de%20la%20sortie%20de%20la%20version%20web%20de%20CliniCard.%0A%0AMerci%20!" class="btn-web-notify">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/></svg>
+                        Être notifié à la sortie
+                    </a>
+                </div>
+
+                <div class="web-teaser-visual" aria-hidden="true">
+                    <div class="browser-mockup">
+                        <div class="browser-bar">
+                            <div class="browser-dots">
+                                <span></span><span></span><span></span>
+                            </div>
+                            <div class="browser-url">app.clinicard.fr</div>
+                        </div>
+                        <div class="browser-content">
+                            <div class="browser-placeholder">
+                                <div class="browser-ph-card">
+                                    <div class="browser-ph-icon">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M2 17l10 5 10-5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M2 12l10 5 10-5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                    </div>
+                                    <div class="browser-ph-label">En développement</div>
+                                    <div class="browser-ph-bar"></div>
+                                    <div class="browser-ph-bar" style="width:68%"></div>
+                                    <div class="browser-ph-bar" style="width:82%"></div>
+                                </div>
+                                <div class="browser-ph-badge">
+                                    <span class="browser-ph-badge-dot"></span>
+                                    Bientôt disponible
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>

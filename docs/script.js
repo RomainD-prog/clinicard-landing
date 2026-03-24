@@ -117,6 +117,17 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+// Announce bar dismiss
+const announceBar = document.getElementById('announceBar');
+const announceClose = document.getElementById('announceClose');
+announceClose?.addEventListener('click', () => {
+  announceBar?.classList.add('is-hidden');
+  sessionStorage.setItem('announce-dismissed', '1');
+});
+if (sessionStorage.getItem('announce-dismissed')) {
+  announceBar?.classList.add('is-hidden');
+}
+
 // Hamburger menu
 const hamburger = document.querySelector('.nav-hamburger');
 const navMobile = document.querySelector('.nav-mobile');
