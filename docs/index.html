@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="CliniCard transforme vos cours PDF en flashcards et QCM orientés concours, avec répétition espacée. Application iOS gratuite pour PASS, LAS, EDN/ECOS.">
-    <meta name="keywords" content="flashcards médecine, qcm médecine, révision pass, révision las, edn ecos, ecn, annales, répétition espacée, application révision médecine, concours santé, fiches médecine, apprendre médecine">
+    <meta name="keywords" content="flashcards médecine PASS, flashcards médecine, qcm médecine, révision pass, révision las, edn ecos, ecn, annales, répétition espacée, application révision médecine, concours santé, fiches médecine, apprendre médecine">
     <title>CliniCard — Flashcards &amp; QCM pour Médecine | PASS, LAS, EDN</title>
     <meta name="author" content="CliniCard">
     <link rel="canonical" href="https://clinicard.fr/">
@@ -31,7 +31,13 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"></noscript>
+    <style>
+      /* Critical: font-family fallbacks while web fonts load */
+      body { font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif; }
+      h1, h2, h3, .hero-title, .section-title { font-family: 'Playfair Display', Georgia, serif; }
+    </style>
 
     <!-- Structured Data / Schema.org -->
     <script type="application/ld+json">
@@ -83,6 +89,60 @@
         "url": "https://clinicard.fr",
         "inLanguage": "fr",
         "description": "Flashcards et QCM générés à partir de vos cours pour réussir en médecine (PASS, LAS, EDN/ECOS)."
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "CliniCard fonctionne-t-il pour le PASS et le LAS ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Oui, CliniCard est conçu spécifiquement pour les étudiants en PASS et LAS. Les flashcards médecine PASS générées par l'application reprennent exactement le contenu de vos cours, avec la terminologie et le niveau de détail attendus aux concours."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Comment fonctionne la répétition espacée dans CliniCard ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "CliniCard intègre un algorithme de répétition espacée inspiré de la méthode des J. L'application planifie automatiquement vos révisions aux intervalles optimaux (J1, J3, J7, J15, J30) pour maximiser la rétention à long terme."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "CliniCard est-il adapté à la préparation de l'EDN et des ECOS ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Oui. CliniCard génère des QCM et des cas cliniques dans le style de l'EDN et des ECOS, à partir de vos cours de 2e et 3e cycle. Les questions entraînent le raisonnement clinique : diagnostic différentiel, conduite à tenir, urgences."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Puis-je importer mes propres cours PDF dans CliniCard ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Oui. Vous importez vos cours en PDF, photo ou texte, et l'IA génère des flashcards et QCM à partir de votre contenu. Vos formulations, vos notions clés, votre programme — pas un contenu générique."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "CliniCard est-il gratuit ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Oui, CliniCard est disponible gratuitement sur l'App Store. Téléchargez l'application, importez vos premiers cours et commencez à réviser immédiatement, sans abonnement obligatoire."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Mes données et mes cours sont-ils privés ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Oui. Vos cours et données personnelles sont traités de manière confidentielle et ne sont jamais partagés avec des tiers."
+            }
+          }
+        ]
       }
     ]
     </script>
@@ -531,6 +591,62 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">FAQ</span>
+                <h2 class="section-title">Questions fréquentes</h2>
+                <p class="section-subtitle">Tout ce que vous voulez savoir sur CliniCard avant de commencer.</p>
+            </div>
+            <div class="faq-grid" itemscope itemtype="https://schema.org/FAQPage">
+
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <h3 class="faq-question" itemprop="name">CliniCard fonctionne-t-il pour le PASS et le LAS ?</h3>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Oui, CliniCard est conçu spécifiquement pour les étudiants en PASS et LAS. Les <strong>flashcards médecine PASS</strong> générées par l'application reprennent exactement le contenu de vos cours, avec la terminologie et le niveau de détail attendus aux concours. Contrairement aux banques de questions génériques, CliniCard part de <em>vos</em> cours — ce qui fait toute la différence à l'examen.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <h3 class="faq-question" itemprop="name">Comment fonctionne la répétition espacée dans CliniCard ?</h3>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">CliniCard intègre un algorithme de répétition espacée inspiré de la méthode des J. Après avoir importé votre cours, l'application planifie automatiquement vos révisions aux intervalles optimaux — J1, J3, J7, J15, J30 — pour maximiser la rétention à long terme. Vous révisez moins souvent, mais au bon moment : c'est scientifiquement plus efficace que de tout relire la veille.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <h3 class="faq-question" itemprop="name">CliniCard est-il adapté à la préparation de l'EDN et des ECOS ?</h3>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Oui. CliniCard génère des QCM et des questions de raisonnement clinique dans le style de l'EDN et des ECOS, à partir de vos cours de 2e et 3e cycle. Diagnostic différentiel, conduite à tenir, urgences vitales — le type de questions qui tombe réellement aux examens.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <h3 class="faq-question" itemprop="name">Puis-je importer mes propres cours PDF dans CliniCard ?</h3>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Absolument. C'est le principe fondamental de CliniCard : importez vos cours en PDF, photo ou texte, et l'IA génère des flashcards et QCM à partir de <em>votre</em> contenu. Vos formulations, vos notions clés, votre programme de fac — pas un contenu générique. Vous mémorisez dans le même contexte que celui de vos examens.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <h3 class="faq-question" itemprop="name">CliniCard est-il gratuit ?</h3>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Oui, CliniCard est disponible gratuitement sur l'App Store. Téléchargez l'application, importez vos premiers cours et commencez à réviser immédiatement, sans abonnement obligatoire.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <h3 class="faq-question" itemprop="name">Mes données et mes cours sont-ils privés ?</h3>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Oui. Vos cours et vos données personnelles sont traités de manière confidentielle et ne sont jamais partagés avec des tiers. Consultez notre <a href="/privacy-policy.html">politique de confidentialité</a> pour les détails complets.</p>
                     </div>
                 </div>
 
