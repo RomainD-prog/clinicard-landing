@@ -1,8 +1,8 @@
 # CliniCard
 
-> Application iOS gratuite de révision médicale pour les étudiants en PASS, LAS, EDN/ECOS et ECN. CliniCard génère automatiquement des flashcards et QCM à partir de vos cours PDF, avec répétition espacée intégrée.
+> Application iOS gratuite de révision médicale pour les étudiants en PASS, LAS, EDN/ECOS, ECN, et études en santé en géneral (kiné, dentaire, pharmacie). CliniCard génère automatiquement des flashcards et QCM à partir de vos cours PDF, avec répétition espacée intégrée.
 
-CliniCard est une application mobile (iOS) destinée aux étudiants en médecine en France. Elle permet de transformer des cours au format PDF en flashcards et QCM orientés concours, en s'appuyant sur la répétition espacée (méthode des J) pour ancrer les connaissances en mémoire à long terme.
+CliniCard est une application mobile (iOS) destinée aux étudiants en santé en France. Elle permet de transformer des cours au format PDF en flashcards et QCM orientés concours, en s'appuyant sur la répétition espacée (méthode des J) pour ancrer les connaissances en mémoire à long terme.
 
 ## Fonctionnalités principales
 
