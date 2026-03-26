@@ -155,3 +155,54 @@ const yearEl = document.querySelector('.footer-bottom p');
 if (yearEl) yearEl.textContent = `© ${new Date().getFullYear()} CliniCard. Tous droits réservés.`;
 
 console.log('CliniCard loaded.');
+
+// ── FAQ Accordion & Tabs ──
+(function () {
+  // Tabs
+  const tabs = document.querySelectorAll('.faq-tab');
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => {
+        t.classList.remove('is-active');
+        t.setAttribute('aria-selected', 'false');
+      });
+      tab.classList.add('is-active');
+      tab.setAttribute('aria-selected', 'true');
+
+      const panelId = tab.getAttribute('aria-controls');
+      document.querySelectorAll('.faq-panel').forEach(p => {
+        if (p.id === panelId) {
+          p.classList.add('is-active');
+          p.removeAttribute('hidden');
+        } else {
+          p.classList.remove('is-active');
+          p.setAttribute('hidden', '');
+          // Close all items in hidden panel
+          p.querySelectorAll('.faq-trigger[aria-expanded="true"]').forEach(t => {
+            t.setAttribute('aria-expanded', 'false');
+            t.closest('.faq-item').querySelector('.faq-answer').classList.remove('is-open');
+          });
+        }
+      });
+    });
+  });
+
+  // Accordion triggers
+  document.querySelectorAll('.faq-trigger').forEach(trigger => {
+    trigger.addEventListener('click', () => {
+      const expanded = trigger.getAttribute('aria-expanded') === 'true';
+      const answer = trigger.closest('.faq-item').querySelector('.faq-answer');
+
+      // Close siblings
+      trigger.closest('.faq-accordion').querySelectorAll('.faq-trigger').forEach(t => {
+        if (t !== trigger) {
+          t.setAttribute('aria-expanded', 'false');
+          t.closest('.faq-item').querySelector('.faq-answer').classList.remove('is-open');
+        }
+      });
+
+      trigger.setAttribute('aria-expanded', String(!expanded));
+      answer.classList.toggle('is-open', !expanded);
+    });
+  });
+}());
