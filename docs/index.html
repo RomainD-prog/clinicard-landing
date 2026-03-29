@@ -255,34 +255,52 @@
             </div>
 
             <div class="hero-visual">
-              <div class="hero-screens-wrap" aria-hidden="true">
+              <div class="hero-fc-wrap">
 
                 <!-- Ambient glow -->
                 <div class="hero-glow"></div>
 
-                <!-- Decorative rings -->
-                <div class="hero-ring"></div>
+                <!-- Card fantôme derrière (effet pile) -->
+                <div class="hero-fc-ghost" aria-hidden="true"></div>
 
-                <!-- Screenshots -->
-                <div class="hero-screen hero-screen-b">
-                  <img src="assets/screen-3.jpeg" alt="CliniCard — QCM style concours" width="390" height="801" loading="eager">
-                </div>
-                <div class="hero-screen hero-screen-a">
-                  <img src="assets/screen-1.jpeg" alt="CliniCard — Flashcards médicales" width="390" height="785" loading="eager">
-                </div>
+                <!-- Flashcard principale -->
+                <div class="hero-fc">
 
-                <!-- Floating feature chips -->
-                <div class="hero-chip hero-chip-1">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke="#60a5fa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                  <span>Généré en quelques secondes</span>
-                </div>
-                <div class="hero-chip hero-chip-2">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M9 11l3 3L22 4" stroke="#34d399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11" stroke="#34d399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                  <span>367 items EDN</span>
-                </div>
-                <div class="hero-chip hero-chip-3">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#fbbf24" stroke-width="2"/><path d="M12 6v6l4 2" stroke="#fbbf24" stroke-width="2" stroke-linecap="round"/></svg>
-                  <span>Répétition espacée</span>
+                  <!-- En-tête -->
+                  <div class="hfc-header">
+                    <span class="hfc-badge">
+                      <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" stroke="#1A6BC0" stroke-width="1.5"/><path d="M6 3v3l2 1.5" stroke="#1A6BC0" stroke-width="1.5" stroke-linecap="round"/></svg>
+                      EDN · Cardiologie
+                    </span>
+                    <span class="hfc-item">Item 234</span>
+                  </div>
+
+                  <!-- Type -->
+                  <p class="hfc-type">Question clinique</p>
+
+                  <!-- Question -->
+                  <p class="hfc-question">Quel est le traitement de première intention de l'insuffisance cardiaque à fraction d'éjection réduite&nbsp;?</p>
+
+                  <!-- Bouton réponse -->
+                  <button class="hfc-btn" type="button">
+                    Voir la réponse
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </button>
+
+                  <!-- Pied de carte -->
+                  <div class="hfc-footer">
+                    <div class="hfc-streak">
+                      <span aria-hidden="true">🔥</span>
+                      <span>Série&nbsp;7</span>
+                    </div>
+                    <div class="hfc-progress">
+                      <div class="hfc-bar" role="progressbar" aria-valuenow="84" aria-valuemin="0" aria-valuemax="100">
+                        <div class="hfc-bar-fill"></div>
+                      </div>
+                      <span class="hfc-pct">84&nbsp;% de réussite</span>
+                    </div>
+                  </div>
+
                 </div>
 
               </div>
