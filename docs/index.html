@@ -292,10 +292,21 @@
                   <p class="hfc-question">Quel est le traitement de première intention de l'insuffisance cardiaque à fraction d'éjection réduite&nbsp;?</p>
 
                   <!-- Bouton réponse -->
-                  <button class="hfc-btn" type="button">
-                    Voir la réponse
-                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <button class="hfc-btn" id="hfcToggle" type="button" aria-expanded="false">
+                    <span class="hfc-btn-label">Voir la réponse</span>
+                    <svg class="hfc-btn-icon" width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                   </button>
+
+                  <!-- Réponse déroulante -->
+                  <div class="hfc-answer" id="hfcAnswer" aria-hidden="true">
+                    <p class="hfc-answer-label">Réponse — Quadrithérapie de l'ICFEr</p>
+                    <ol class="hfc-answer-list">
+                      <li><strong>IEC</strong> (ou ARNI si insuffisant sous IEC)</li>
+                      <li><strong>Bêtabloquant</strong> (bisoprolol, carvédilol, métoprolol)</li>
+                      <li><strong>ARM</strong> (spironolactone ou éplérénone)</li>
+                      <li><strong>iSGLT2</strong> (dapagliflozine ou empagliflozine)</li>
+                    </ol>
+                  </div>
 
                   <!-- Pied de carte -->
                   <div class="hfc-footer">

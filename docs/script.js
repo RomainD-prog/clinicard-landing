@@ -156,6 +156,22 @@ if (yearEl) yearEl.textContent = `© ${new Date().getFullYear()} CliniCard. Tous
 
 console.log('CliniCard loaded.');
 
+// ── Flashcard hero toggle ──
+(function () {
+  const btn = document.getElementById('hfcToggle');
+  const panel = document.getElementById('hfcAnswer');
+  const label = btn?.querySelector('.hfc-btn-label');
+  if (!btn || !panel) return;
+
+  btn.addEventListener('click', () => {
+    const open = btn.getAttribute('aria-expanded') === 'true';
+    btn.setAttribute('aria-expanded', String(!open));
+    panel.setAttribute('aria-hidden', String(open));
+    panel.classList.toggle('is-open', !open);
+    if (label) label.textContent = open ? 'Voir la réponse' : 'Masquer la réponse';
+  });
+}());
+
 // ── FAQ Accordion & Tabs ──
 (function () {
   // Tabs
