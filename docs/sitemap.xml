@@ -8,8 +8,14 @@
   </url>
   <url>
     <loc>https://clinicard.fr/blog/</loc>
-    <lastmod>2026-03-31</lastmod>
+    <lastmod>2026-04-05</lastmod>
     <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://clinicard.fr/blog/courbe-oubli-memorisation-medecine-pass-edn</loc>
+    <lastmod>2026-04-05</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
