@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this repo is
 
-Static landing page for **CliniCard** ([clinicard.fr](https://clinicard.fr)), a medical revision app for French medical students (PASS, LAS, EDN/ECOS). The site promotes the iOS app and captures early-access interest.
+Static landing page for **CliniCard** ([clinicard.fr](https://clinicard.fr)), a medical revision app for French medical students (PASS, LAS, EDN). Focused on course revision for QCM — not ECOS/clinical stations. The site promotes the iOS app and captures early-access interest.
 
 ## Structure
 
