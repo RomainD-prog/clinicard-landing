@@ -217,11 +217,18 @@ a { color: inherit; text-decoration: none; }
 }
 .hero .hero-badge-dot { background: #60a5fa; }
 .hero .hero-badge-web {
-  background: rgba(255,255,255,0.05);
-  border-color: rgba(255,255,255,0.1);
-  color: rgba(255,255,255,0.55);
+  background: rgba(16, 185, 129, 0.14);
+  border-color: rgba(16, 185, 129, 0.38);
+  color: #6ee7b7;
+  text-decoration: none;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
 }
-.hero .hero-badge-dot-web { background: var(--azure-light); }
+.hero .hero-badge-web:hover {
+  background: rgba(16, 185, 129, 0.22);
+  border-color: rgba(16, 185, 129, 0.55);
+  color: #a7f3d0;
+}
+.hero .hero-badge-dot-web { background: #34d399; }
 
 .hero .hero-title { color: #ffffff; }
 
@@ -252,6 +259,32 @@ a { color: inherit; text-decoration: none; }
   color: #ffffff;
   transform: translateY(-1px);
 }
+
+/* ---- Web CTA button in hero ---- */
+.btn-web-hero {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 22px;
+  border-radius: 12px;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 15px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.22s ease;
+  background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+  color: #ffffff;
+  border: 1.5px solid rgba(16, 185, 129, 0.6);
+  box-shadow: 0 4px 18px rgba(5, 150, 105, 0.38), 0 0 0 1px rgba(16, 185, 129, 0.15);
+}
+.btn-web-hero:hover {
+  background: linear-gradient(135deg, #047857 0%, #059669 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(5, 150, 105, 0.48), 0 0 0 1px rgba(16, 185, 129, 0.25);
+  color: #ffffff;
+}
+.btn-web-hero:active { transform: translateY(0); }
 
 .hero .stat {
   background: rgba(255,255,255,0.06);
@@ -1941,8 +1974,35 @@ a { color: inherit; text-decoration: none; }
 
 /* ─── Version Web CTA Section ────────────────────────────────────────── */
 .webcta-section {
-  padding: 80px 0;
-  background: var(--sky);
+  padding: 108px 0;
+  background: #071829;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Radial glow */
+.webcta-section::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 800px;
+  height: 480px;
+  background: radial-gradient(ellipse at center, rgba(26, 107, 192, 0.22) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+/* Subtle grid overlay */
+.webcta-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+  background-size: 48px 48px;
+  pointer-events: none;
 }
 
 .webcta-inner {
@@ -1950,39 +2010,57 @@ a { color: inherit; text-decoration: none; }
   flex-direction: column;
   align-items: center;
   text-align: center;
-  max-width: 600px;
+  max-width: 640px;
   margin: 0 auto;
+  position: relative;
+  z-index: 1;
 }
 
 .webcta-icon-wrap {
-  width: 56px;
-  height: 56px;
-  border-radius: 16px;
-  background: #fff;
-  border: 1.5px solid #dde8f5;
+  width: 62px;
+  height: 62px;
+  border-radius: 18px;
+  background: rgba(26, 107, 192, 0.18);
+  border: 1.5px solid rgba(59, 130, 246, 0.35);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #1A6BC0;
-  box-shadow: 0 4px 16px rgba(12, 45, 90, 0.08);
-  margin-bottom: 20px;
+  color: #60a5fa;
+  box-shadow: 0 0 28px rgba(26, 107, 192, 0.32), inset 0 1px 0 rgba(255,255,255,0.08);
+  margin-bottom: 24px;
 }
 
 .webcta-label {
-  background: rgba(26, 107, 192, 0.1);
-  color: #1A6BC0;
-  margin-bottom: 16px;
+  background: rgba(16, 185, 129, 0.12);
+  color: #34d399;
+  border: 1px solid rgba(16, 185, 129, 0.28);
+  margin-bottom: 22px;
+  font-size: 11.5px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  font-weight: 700;
 }
 
 .webcta-title {
-  margin-bottom: 16px;
+  margin-bottom: 20px;
+  color: #ffffff !important;
+  font-size: clamp(2rem, 4vw, 2.9rem);
+  line-height: 1.18;
+}
+
+.webcta-title em {
+  font-style: italic;
+  background: linear-gradient(135deg, #60a5fa 0%, #93c5fd 55%, #6ee7b7 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .webcta-subtitle {
-  font-size: 16px;
-  color: #475569;
-  line-height: 1.7;
-  margin: 0 0 32px;
+  font-size: 16.5px;
+  color: rgba(255,255,255,0.5);
+  line-height: 1.75;
+  margin: 0 0 36px;
   max-width: 480px;
 }
 
@@ -1991,41 +2069,66 @@ a { color: inherit; text-decoration: none; }
   flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
-  margin-bottom: 36px;
+  margin-bottom: 42px;
 }
 
 .webcta-perk {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  background: #fff;
-  border: 1px solid #dde8f5;
+  gap: 7px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
   border-radius: 100px;
-  padding: 6px 14px;
+  padding: 7px 16px;
   font-size: 13px;
   font-weight: 500;
-  color: #334155;
-  box-shadow: 0 1px 4px rgba(12, 45, 90, 0.05);
+  color: rgba(255,255,255,0.65);
 }
 
 .webcta-btn {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
+  font-family: var(--font-body);
   font-size: 16px;
-  padding: 14px 28px;
+  font-weight: 700;
+  padding: 16px 34px;
   border-radius: 14px;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
+  background: linear-gradient(135deg, #1A6BC0 0%, #3B82F6 100%);
+  color: #ffffff;
+  text-decoration: none;
+  border: none;
+  box-shadow:
+    0 4px 24px rgba(26, 107, 192, 0.5),
+    0 0 0 1px rgba(59, 130, 246, 0.3),
+    inset 0 1px 0 rgba(255,255,255,0.12);
+  transition: all 0.22s ease;
+  cursor: pointer;
 }
+
+.webcta-btn:hover {
+  background: linear-gradient(135deg, #1558a6 0%, #2563eb 100%);
+  transform: translateY(-2px);
+  box-shadow:
+    0 10px 36px rgba(26, 107, 192, 0.6),
+    0 0 0 1px rgba(59, 130, 246, 0.45),
+    inset 0 1px 0 rgba(255,255,255,0.14);
+  color: #ffffff;
+}
+
+.webcta-btn:active { transform: translateY(0); }
 
 .webcta-note {
   font-size: 12px;
-  color: #94a3b8;
+  color: rgba(255,255,255,0.28);
   margin: 0;
+  letter-spacing: 0.03em;
 }
 
 @media (max-width: 640px) {
-  .webcta-section { padding: 56px 0; }
+  .webcta-section { padding: 76px 0; }
   .webcta-perks { gap: 8px; }
   .webcta-perk { font-size: 12px; }
+  .webcta-title { font-size: 1.85rem; }
 }
