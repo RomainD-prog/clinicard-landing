@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anki en médecine PASS et EDN : guide complet pour débutants | Blog CliniCard</title>
+    <meta name="description" content="Anki est l'outil de répétition espacée le plus utilisé en médecine. Guide complet : installation, configuration, decks officiels, et alternatives pour le PASS et l'EDN.">
+    <meta name="keywords" content="Anki médecine, Anki PASS, Anki EDN, répétition espacée, flashcards médecine, decks Anki PASS, Anki LAS, révision médecine">
+    <meta name="author" content="CliniCard">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://clinicard.fr/blog/anki-medecine-pass-guide-complet">
+    <meta property="og:title" content="Anki en médecine PASS et EDN : guide complet pour débutants">
+    <meta property="og:description" content="Anki est l'outil de répétition espacée le plus utilisé en médecine. Guide complet : installation, configuration, decks officiels, et alternatives pour le PASS et l'EDN.">
+    <meta property="og:image" content="https://clinicard.fr/assets/og-image.png">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Anki en médecine PASS et EDN : guide complet pour débutants">
+    <link rel="canonical" href="https://clinicard.fr/blog/anki-medecine-pass-guide-complet">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="apple-touch-icon" href="/assets/icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" crossorigin href="https://fonts.gstatic.com/s/playfairdisplay/v40/nuFiD-vYSZviVYUb_rj3ij__anPXPT7Sh2E-.woff2">
+    <link rel="preload" as="font" type="font/woff2" crossorigin href="https://fonts.gstatic.com/s/plusjakartasans/v12/LDIoaomQNQcsA88c7O9yZ4KMCoOg4Jo02SuCgQ.woff2">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"></noscript>
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Anki en médecine PASS et EDN : guide complet pour débutants",
+  "description": "Anki est l'outil de répétition espacée le plus utilisé en médecine. Guide complet : installation, configuration, decks officiels, et alternatives pour le PASS et l'EDN.",
+  "datePublished": "2026-04-21",
+  "dateModified": "2026-04-21",
+  "author": {
+    "@type": "Person",
+    "name": "Romain D.",
+    "jobTitle": "Créateur de CliniCard",
+    "url": "https://clinicard.fr"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "CliniCard",
+    "url": "https://clinicard.fr",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://clinicard.fr/assets/medflash-logo.png",
+      "width": 36,
+      "height": 36
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://clinicard.fr/blog/anki-medecine-pass-guide-complet"
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://clinicard.fr/assets/og-image.png",
+    "width": 1200,
+    "height": 630
+  }
+}
+    </script>
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Accueil",
+      "item": "https://clinicard.fr/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://clinicard.fr/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Anki en médecine PASS et EDN : guide complet pour débutants",
+      "item": "https://clinicard.fr/blog/anki-medecine-pass-guide-complet"
+    }
+  ]
+}
+    </script>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .article-hero { background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 60%, var(--azure) 100%); padding: 100px 0 56px; color: var(--white); }
+        .article-hero-inner { max-width: 760px; margin: 0 auto; }
+        .article-tag { display: inline-block; background: rgba(255,255,255,0.15); color: rgba(255,255,255,0.9); font-family: var(--font-body); font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; padding: 0.3rem 0.85rem; border-radius: 999px; margin-bottom: 1.25rem; border: 1px solid rgba(255,255,255,0.2); }
+        .article-title { font-family: var(--font-display); font-size: clamp(1.75rem, 4vw, 2.75rem); font-weight: 800; line-height: 1.2; margin-bottom: 1rem; }
+        .article-subtitle { font-family: var(--font-body); font-size: 1.1rem; opacity: 0.85; line-height: 1.7; margin-bottom: 1.5rem; }
+        .article-meta { font-family: var(--font-body); font-size: 0.85rem; opacity: 0.65; }
+        .article-body { padding: 3.5rem 0 5rem; }
+        .article-content { max-width: 760px; margin: 0 auto; font-family: var(--font-body); color: var(--body); font-size: 1.05rem; line-height: 1.8; }
+        .article-content h2 { font-family: var(--font-display); font-size: 1.65rem; font-weight: 700; color: var(--navy); margin: 2.5rem 0 1rem; line-height: 1.3; }
+        .article-content h3 { font-family: var(--font-body); font-size: 1.15rem; font-weight: 700; color: var(--navy-mid); margin: 2rem 0 0.75rem; }
+        .article-content p { margin-bottom: 1.25rem; }
+        .article-content strong { color: var(--navy); font-weight: 700; }
+        .article-content ul, .article-content ol { margin: 1rem 0 1.5rem; padding-left: 1.5rem; }
+        .article-content li { margin-bottom: 0.6rem; padding-left: 0.25rem; }
+        .callout { background: var(--sky); border-left: 4px solid var(--azure); border-radius: 0 var(--radius-md) var(--radius-md) 0; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+        .callout-title { font-family: var(--font-body); font-weight: 700; color: var(--azure-dark); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem; }
+        .callout p { margin: 0; font-size: 0.97rem; color: var(--navy-mid); }
+        .highlight-box { border: 1px solid var(--border); background: var(--white); border-radius: var(--radius-lg); padding: 1.75rem; margin: 2rem 0; box-shadow: var(--shadow-sm); }
+        .highlight-box-title { font-family: var(--font-display); font-size: 1.15rem; color: var(--navy); font-weight: 700; margin-bottom: 1rem; }
+        .article-cta { background: linear-gradient(135deg, var(--navy) 0%, var(--azure) 100%); border-radius: var(--radius-xl); padding: 2.25rem 2rem; margin: 3rem 0; text-align: center; color: var(--white); }
+        .article-cta h3 { font-family: var(--font-display); font-size: 1.4rem; font-weight: 700; margin-bottom: 0.75rem; color: var(--white); }
+        .article-cta p { font-family: var(--font-body); font-size: 0.97rem; opacity: 0.85; margin-bottom: 1.5rem; }
+        .article-cta .btn { background: var(--white); color: var(--navy); font-weight: 700; }
+        .back-link { display: inline-flex; align-items: center; gap: 0.4rem; font-family: var(--font-body); font-size: 0.875rem; color: rgba(255,255,255,0.7); text-decoration: none; margin-bottom: 2rem; transition: color 0.15s; }
+        .back-link:hover { color: var(--white); }
+        .comparison-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0 2rem; font-size: 0.97rem; }
+        .comparison-table th { background: var(--navy); color: var(--white); padding: 0.75rem 1rem; text-align: left; font-family: var(--font-body); font-weight: 700; }
+        .comparison-table td { padding: 0.7rem 1rem; border-bottom: 1px solid var(--border); vertical-align: top; }
+        .comparison-table tr:nth-child(even) td { background: var(--sky); }
+        .check { color: #10B981; font-weight: 700; }
+        .cross { color: #EF4444; font-weight: 700; }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="nav">
+                <div class="logo">
+                    <a href="/" style="display:flex;align-items:center;gap:0.5rem;text-decoration:none;">
+                        <picture><source srcset="../assets/medflash-logo.webp" type="image/webp"><img src="../assets/medflash-logo.png" alt="CliniCard Logo" class="logo-img"></picture>
+                        <span class="logo-text">CliniCard</span>
+                    </a>
+                </div>
+                <nav class="nav-links">
+                    <a href="/#fonctionnalites">Fonctionnalités</a>
+                    <a href="/#pourquoi">Pourquoi CliniCard</a>
+                    <a href="/blog/" style="color: var(--azure); font-weight: 600;">Blog</a>
+                </nav>
+                <a href="/#telechargement" class="nav-cta">Télécharger</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="article-hero">
+        <div class="container">
+            <div class="article-hero-inner">
+                <a href="/blog/" class="back-link">
+                    <svg width="14" height="14" viewBox="0 0 20 20" fill="none"><path d="M16 10H4M10 16l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    Retour au blog
+                </a>
+                <span class="article-tag">Outils</span>
+                <h1 class="article-title">Anki en médecine PASS et EDN : guide complet pour débutants</h1>
+                <p class="article-subtitle">Anki est l'outil de référence pour mémoriser en médecine — mais il intimide beaucoup d'étudiants au départ. Installation, configuration, decks, et vraies alternatives : tout ce qu'il faut savoir avant de commencer.</p>
+                <p class="article-meta">21 avril 2026 · 8 min de lecture · Par l'équipe CliniCard</p>
+            </div>
+        </div>
+    </section>
+
+    <article class="article-body">
+        <div class="container">
+            <div class="article-content">
+
+                <p>Dans quasiment toutes les promotions de PASS en France, Anki revient dans la conversation tôt ou tard. C'est l'outil qu'utilisent beaucoup des étudiants qui réussissent — mais aussi celui qui bloque des dizaines d'étudiants dès la prise en main, ou qu'on abandonne après deux semaines parce qu'on n'a pas su comment l'intégrer correctement.</p>
+
+                <p>Ce guide fait le tour complet : ce qu'est Anki, comment ça fonctionne, quels decks utiliser en médecine française, ce qu'il faut éviter — et pourquoi certains étudiants choisissent une autre voie.</p>
+
+                <h2>Qu'est-ce qu'Anki exactement ?</h2>
+
+                <p>Anki est un logiciel de flashcards open source basé sur la <strong>répétition espacée</strong> (spaced repetition). Disponible sur ordinateur (Windows, Mac, Linux), iPhone et Android, il vous permet de créer ou d'importer des cartes questions/réponses, que l'algorithme planifie selon votre niveau de mémorisation.</p>
+
+                <p>Le principe : après chaque carte, vous évaluez votre difficulté (à nouveau / difficile / bon / facile). L'algorithme SM-2, sur lequel Anki est construit, recalcule ensuite la prochaine date de révision. Les cartes que vous maîtrisez reviennent dans des semaines ; celles que vous ratez reviennent le lendemain. Résultat : vous ne révisez jamais ce que vous savez déjà parfaitement, et vous ne laissez jamais tomber ce que vous oubliez.</p>
+
+                <div class="callout">
+                    <div class="callout-title">Pourquoi les médecins utilisent Anki</div>
+                    <p>Anki est massivement utilisé dans les facultés de médecine anglophones (États-Unis, UK, Canada) depuis plus de dix ans. Des études de cohorte montrent une corrélation positive entre l'utilisation régulière d'Anki et les scores aux examens de boards médicaux. En France, son adoption s'est accélérée avec le passage au régime PASS/LAS.</p>
+                </div>
+
+                <p>La version de bureau (AnkiDesktop) est gratuite et open source. L'application iOS (AnkiMobile) coûte environ 25 €, un achat unique qui finance le développement du projet. Sur Android, AnkiDroid est gratuite.</p>
+
+                <h2>Comment configurer Anki pour le PASS et l'EDN</h2>
+
+                <p>Un des freins à l'entrée d'Anki, c'est qu'il faut le configurer avant de l'utiliser efficacement. Les paramètres par défaut ne sont pas optimaux pour les volumes de révision de la médecine française.</p>
+
+                <h3>Les paramètres à modifier en priorité</h3>
+
+                <p>Dans les options du deck (clic droit → Options), ajustez les paramètres suivants :</p>
+
+                <ul>
+                    <li><strong>Nouvelles cartes par jour :</strong> commencez à 20-30 cartes/jour maximum. Plus ne veut pas dire mieux — une charge trop élevée accumule un arriéré de révisions impossible à résorber.</li>
+                    <li><strong>Révisions par jour :</strong> mettez une limite haute (500+) pour éviter que le plafond ne tronque vos sessions. L'objectif est de finir toutes vos révisions chaque jour, pas de les limiter arbitrairement.</li>
+                    <li><strong>Maximum interval :</strong> réduisez à 180 jours (6 mois) pour la médecine, plutôt que les 36 mois par défaut — les concours sont annuels, inutile de programmer des révisions au-delà.</li>
+                    <li><strong>Starting ease :</strong> laissez à 250% par défaut.</li>
+                </ul>
+
+                <p>Il existe aussi des plugins (add-ons) populaires comme <strong>FSRS</strong> (un algorithme de répétition espacée plus récent et plus performant que SM-2), disponible directement dans Anki depuis la version 23. Si vous démarrez aujourd'hui, activez FSRS plutôt que SM-2.</p>
+
+                <h3>Créer ses cartes ou importer des decks ?</h3>
+
+                <p>C'est l'une des questions les plus fréquentes. La réponse courte : <strong>les deux, mais pas dans le même ordre que vous pensez.</strong></p>
+
+                <p>Créer ses propres cartes depuis ses cours favorise la mémorisation — l'effort de reformulation est déjà du travail cognitif. Mais en PASS, le temps est une ressource rare. Passer 3 heures à créer des cartes sur la biochimie au lieu de les réviser est souvent contre-productif en début d'année.</p>
+
+                <p>La stratégie recommandée : <strong>importez des decks existants pour les chapitres que vous découvrez</strong>, créez vos propres cartes pour les points spécifiques à votre cours qui ne sont pas couverts, ou pour les points que vous ratez régulièrement et que vous voulez reformuler avec vos propres mots.</p>
+
+                <h2>Quels decks Anki utiliser pour le PASS et l'EDN en France ?</h2>
+
+                <p>La communauté Anki médicale francophone est active, mais moins structurée que la communauté anglophone (qui bénéficie notamment des decks de AnKing, couvrant l'intégralité du programme américain). Pour le système français, voici ce qui existe.</p>
+
+                <h3>Decks communautaires pour le PASS</h3>
+
+                <p>Des associations étudiantes et des promotions partagent leurs decks sur des plateformes comme <strong>AnkiWeb</strong> (le dépôt officiel) ou via les drives des BDE médicaux. La qualité varie considérablement selon la source et l'année de création.</p>
+
+                <p>Critères pour évaluer un deck :</p>
+                <ul>
+                    <li>Date de création ou de dernière mise à jour — le programme PASS a évolué depuis la réforme</li>
+                    <li>Niveau de granularité : cartes trop longues avec plusieurs points = efficacité réduite ; une carte = un fait précis</li>
+                    <li>Cohérence avec votre cours : un deck générique ne couvre pas les spécificités de votre fac</li>
+                    <li>Volume : un deck de 5 000 cartes sur une matière entière peut prendre des semaines à "initialiser"</li>
+                </ul>
+
+                <h3>Decks pour l'EDN</h3>
+
+                <p>Pour la D4/D5 et la préparation à l'EDN, les decks les plus complets couvrent les items ECN classiques. Des projets comme <strong>ECN Flashcards</strong> ou les decks liés aux référentiels du Collège partagent des cartes sur les items validés. La difficulté est la mise à jour régulière face aux nouvelles recommandations HAS.</p>
+
+                <h2>Les vraies limites d'Anki pour la médecine française</h2>
+
+                <p>Anki est puissant, mais il a des défauts que peu de guides mentionnent franchement.</p>
+
+                <h3>L'arriéré de révisions (le "backlog")</h3>
+
+                <p>C'est le problème numéro un. Si vous manquez 3 jours de révisions, l'arriéré peut atteindre plusieurs centaines de cartes. Plus l'arriéré est grand, plus il est décourageant, plus on évite Anki, plus l'arriéré grossit. Beaucoup d'étudiants abandonnent Anki à cause de ce cycle.</p>
+
+                <p>La solution : traitez Anki comme une obligation quotidienne non négociable — 20 à 30 minutes de révisions par jour, même pendant les semaines chargées. Mieux vaut revoir 50 cartes aujourd'hui que d'en accumuler 500 pour la fin de semaine.</p>
+
+                <h3>La création de cartes prend du temps</h3>
+
+                <p>Un deck générique ne couvre jamais exactement votre cours. Pour être vraiment efficace, une partie des cartes doit être personnalisée à votre cours magistral, votre poly, votre fac. Cela représente un investissement initial significatif, surtout au début du PASS quand tout est nouveau.</p>
+
+                <h3>L'interface n'est pas faite pour réviser en mobilité</h3>
+
+                <p>La version desktop est la plus complète, mais réviser sur ordinateur n'est pas toujours pratique dans les transports, entre deux cours, ou en bibliothèque. AnkiMobile sur iPhone existe, mais elle coûte 25 € et n'est pas incluse dans le logiciel gratuit. L'UX mobile reste plus austère que des applications natives.</p>
+
+                <h3>Anki ne génère pas de QCMs</h3>
+
+                <p>Les concours de médecine français (PASS, EDN) sont structurés autour des QCMs. Anki entraîne la mémorisation par flashcards, mais ne prépare pas directement au format question-réponse à choix multiples avec distracteurs. Un étudiant qui n'a fait que des flashcards peut avoir des lacunes dans la gestion du format QCM concours.</p>
+
+                <h2>Anki vs autres outils : comparaison pour le PASS</h2>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Critère</th>
+                            <th>Anki</th>
+                            <th>CliniCard</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Algorithme de répétition espacée</td>
+                            <td><span class="check">✓</span> SM-2 / FSRS</td>
+                            <td><span class="check">✓</span> Intégré</td>
+                        </tr>
+                        <tr>
+                            <td>Génération auto depuis vos cours</td>
+                            <td><span class="cross">✗</span> Manuelle</td>
+                            <td><span class="check">✓</span> IA sur vos fichiers</td>
+                        </tr>
+                        <tr>
+                            <td>QCMs en plus des flashcards</td>
+                            <td><span class="cross">✗</span></td>
+                            <td><span class="check">✓</span></td>
+                        </tr>
+                        <tr>
+                            <td>Application mobile native</td>
+                            <td>25 € (iOS) / gratuit (Android)</td>
+                            <td><span class="check">✓</span> Inclus</td>
+                        </tr>
+                        <tr>
+                            <td>Prise en main</td>
+                            <td>Courbe d'apprentissage</td>
+                            <td>Immédiate</td>
+                        </tr>
+                        <tr>
+                            <td>Decks partagés</td>
+                            <td><span class="check">✓</span> Communauté large</td>
+                            <td>Contenu depuis vos cours</td>
+                        </tr>
+                        <tr>
+                            <td>Prix</td>
+                            <td>Gratuit (+ 25 € iOS)</td>
+                            <td>Gratuit</td>
+                        </tr>
+                        <tr>
+                            <td>Personnalisation avancée</td>
+                            <td><span class="check">✓</span> Illimitée</td>
+                            <td>Guidée</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p>Les deux outils ne s'excluent pas. Certains étudiants utilisent Anki pour les révisions de fond sur les grandes matières, et CliniCard pour les cours spécifiques à leur fac qu'ils importent directement. D'autres préfèrent une seule application. L'essentiel est de pratiquer la répétition espacée régulièrement — l'outil est secondaire.</p>
+
+                <h2>Comment intégrer Anki (ou les flashcards) à votre planning</h2>
+
+                <p>Quelle que soit l'application choisie, l'intégration dans votre planning hebdomadaire suit les mêmes règles.</p>
+
+                <div class="highlight-box">
+                    <div class="highlight-box-title">Routine recommandée en PASS</div>
+                    <ul>
+                        <li><strong>Matin (20-30 min) :</strong> révisions des cartes de la veille + cartes dues selon l'algorithme. À faire avant d'ouvrir quoi que ce soit d'autre — le cerveau frais encode mieux.</li>
+                        <li><strong>Après chaque nouveau cours :</strong> créez 5-10 cartes sur les points clés pendant que le cours est frais (ou importez-les si vous utilisez CliniCard). Ne laissez pas s'accumuler plus de 24h.</li>
+                        <li><strong>Soir (15 min) :</strong> si l'arriéré le demande, session courte de rattrapage. Jamais au détriment du sommeil — la consolidation mémorielle se fait la nuit.</li>
+                        <li><strong>Week-end :</strong> maintenez la routine même le samedi. Dimanche peut être une session plus légère. L'algorithme ne se met pas en pause.</li>
+                    </ul>
+                </div>
+
+                <h2>Conseils pour ne pas abandonner Anki après deux semaines</h2>
+
+                <p>Le taux d'abandon est élevé parmi les nouveaux utilisateurs d'Anki. Voici les erreurs qui tuent la pratique, et comment les éviter.</p>
+
+                <h3>Ne pas démarrer avec trop de cartes</h3>
+
+                <p>L'enthousiasme du départ pousse à importer des decks de 3 000 cartes ou à créer 50 cartes par jour. Trois semaines plus tard, l'arriéré de révisions est monstrueux. <strong>Commencez à 20 nouvelles cartes par jour maximum</strong>, même si vous avez envie de faire plus. Augmentez seulement quand vous gérez confortablement ce rythme.</p>
+
+                <h3>Ne pas confondre créer et réviser</h3>
+
+                <p>Créer des cartes donne l'impression de travailler. Mais si vous n'ouvrez pas Anki pour réviser chaque jour, les cartes ne servent à rien. La valeur est dans la révision, pas dans la création. Si vous manquez de temps, révisez d'abord, créez ensuite.</p>
+
+                <h3>Accepter les mauvais jours</h3>
+
+                <p>Certains jours, vous aurez l'impression de tout oublier. C'est normal et prévu dans l'algorithme. Appuyez sur "à nouveau" honnêtement — ne trichez pas pour "avancer" plus vite. L'algorithme recalcule, et les cartes difficiles reviennent plus souvent jusqu'à ce qu'elles s'ancrent. La progression est réelle même quand elle est invisible.</p>
+
+                <div class="article-cta">
+                    <h3>Révisez depuis vos propres cours sans créer de cartes à la main</h3>
+                    <p>CliniCard génère automatiquement des flashcards et QCMs adaptés à vos cours de PASS, LAS et EDN. Importez vos PDF et commencez à réviser en 2 minutes.</p>
+                    <a href="https://apps.apple.com/app/id6758679816" class="btn btn-primary" target="_blank" rel="noopener">
+                        Télécharger CliniCard gratuitement
+                    </a>
+                </div>
+
+                <h2>En résumé</h2>
+                <ul>
+                    <li>Anki est un logiciel de flashcards basé sur la répétition espacée, gratuit sur desktop et Android, 25 € sur iOS</li>
+                    <li>La configuration initiale est importante : limitez les nouvelles cartes à 20-30/jour, activez FSRS, réduisez l'intervalle maximum à 180 jours</li>
+                    <li>Des decks communautaires existent pour le PASS et l'EDN, mais la qualité et l'adéquation à votre cours varient — vérifiez toujours la date et la granularité</li>
+                    <li>Les limites principales : gestion du backlog, temps de création de cartes, absence de QCMs format concours</li>
+                    <li>La routine quotidienne compte plus que l'outil : 20-30 minutes/jour de révisions espacées battent 3 heures ponctuelles le week-end</li>
+                    <li>Anki et CliniCard peuvent se compléter — l'essentiel est de pratiquer la récupération active régulièrement</li>
+                </ul>
+
+                <hr style="border:none;border-top:1px solid var(--border-light);margin:3rem 0 2rem;">
+                <p style="font-size:0.875rem;color:var(--muted);">
+                    <strong>À lire aussi :</strong>
+                    <ul style="margin:0.5rem 0 0;padding-left:1.25rem;">
+                    <li><a href="/blog/methode-des-j-repetition-espacee-medecine" style="color:var(--azure);">La méthode des J : comment fonctionne la répétition espacée</a></li>
+                    <li><a href="/blog/creer-flashcards-efficaces-pass-edn" style="color:var(--azure);">Comment créer des flashcards vraiment efficaces pour le PASS</a></li>
+                    <li><a href="/blog/active-recall-memoriser-vite-pass-edn" style="color:var(--azure);">Active recall : se tester plutôt que relire</a></li>
+                    </ul>
+                </p>
+            </div>
+        </div>
+    </article>
+
+    <section class="article-author-section">
+        <div class="container">
+            <div class="article-author-card">
+                <div class="author-avatar">R</div>
+                <div class="author-info">
+                    <p class="author-name">Romain D.</p>
+                    <p class="author-desc">Créateur de CliniCard — application de révision médicale pour les étudiants en PASS, LAS et EDN.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-card">
+                <div class="cta-badge">Disponible maintenant</div>
+                <h2 class="cta-title">Prêt à réviser autrement ?</h2>
+                <p class="cta-text">Téléchargez CliniCard gratuitement sur l'App Store et commencez à réviser dès aujourd'hui.</p>
+                <a href="https://apps.apple.com/app/id6758679816" class="btn btn-cta" target="_blank" rel="noopener">Télécharger gratuitement</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <picture><source srcset="../assets/medflash-logo.webp" type="image/webp"><img src="../assets/medflash-logo.png" alt="CliniCard Logo" class="logo-img footer-logo-img"></picture>
+                        <span class="logo-text footer-logo-text">CliniCard</span>
+                    </div>
+                    <p class="footer-tagline">Réviser intelligemment pour réussir vos concours de médecine.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="/">Accueil</a>
+                    <a href="/blog/">Blog</a>
+                    <a href="/privacy-policy.html">Politique de confidentialité</a>
+                </div>
+            </div>
+            <p class="footer-copy">© 2026 CliniCard. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
