@@ -1172,8 +1172,10 @@ a { color: inherit; text-decoration: none; }
 }
 .testimonials-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 24px;
+  max-width: 860px;
+  margin: 0 auto;
 }
 .testimonial-item {
   background: var(--white);
@@ -2269,9 +2271,6 @@ a { color: inherit; text-decoration: none; }
 }
 
 /* ---- Testimonials responsive ---- */
-@media (max-width: 900px) {
-  .testimonials-grid { grid-template-columns: 1fr 1fr; }
-}
 @media (max-width: 640px) {
   .testimonials-grid { grid-template-columns: 1fr; }
   .testimonials-section { padding: 56px 0; }
