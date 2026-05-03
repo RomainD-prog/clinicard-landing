@@ -49,3 +49,25 @@ Android is not yet launched; clicking the Android button shows an inline message
 ## Deployment
 
 GitHub Pages serves the `docs/` folder from the `main` branch. Pushing to `main` is the only deploy step. The `CNAME` file in `docs/` sets the custom domain to `clinicard.fr`.
+
+## Blog bot — règles git obligatoires
+
+Le bot de création d'articles doit **toujours pousser directement sur `main`**, sans passer par une branche intermédiaire. GitHub Pages déploie depuis `main` : un push sur une autre branche ne publie rien.
+
+Workflow git obligatoire pour le bot blog :
+
+```bash
+git config user.email "bot@clinicard.fr"
+git config user.name "CliniCard Blog Bot"
+# S'assurer d'être sur main et à jour
+git fetch origin main
+git checkout main
+git pull origin main
+# Créer le fichier article, modifier index.html et sitemap.xml
+git add docs/blog/[SLUG].html docs/blog/index.html docs/sitemap.xml
+git commit -m "blog: [TITRE_COURT]"
+git push https://<GH_TOKEN>@github.com/RomainD-prog/clinicard-landing.git main
+```
+
+Si le push échoue par conflit : `git pull --rebase origin main` puis réessayer.  
+**Ne jamais pousser sur une branche feature pour le blog** — le déploiement ne se ferait pas.
