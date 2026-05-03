@@ -2,7 +2,7 @@
 
 > Application iOS gratuite de révision médicale pour les étudiants en PASS, LAS, EDN, ECN, et études en santé en général (kiné, dentaire, pharmacie). CliniCard génère automatiquement des flashcards et QCM à partir de vos cours PDF, avec répétition espacée intégrée.
 
-CliniCard est une application mobile (iOS) destinée aux étudiants en santé en France. Elle permet de transformer des cours au format PDF en flashcards et QCM orientés concours, en s'appuyant sur la répétition espacée (méthode des J) pour ancrer les connaissances en mémoire à long terme.
+CliniCard est une application mobile (iOS) et web destinée aux étudiants en santé en France. Elle permet de transformer des cours au format PDF en flashcards et QCM orientés concours, en s'appuyant sur la répétition espacée (méthode des J) pour ancrer les connaissances en mémoire à long terme.
 
 ## Fonctionnalités principales
 
@@ -10,7 +10,7 @@ CliniCard est une application mobile (iOS) destinée aux étudiants en santé en
 - QCM dans le style des concours PASS, LAS, EDN
 - Répétition espacée (méthode des J : J0, J1, J3, J7, J15, J30)
 - Annales et suivi de progression
-- Gratuit, disponible sur iOS (App Store)
+- Gratuit, disponible sur iOS (App Store) et sur le web
 
 ## Public cible
 
@@ -19,6 +19,7 @@ CliniCard est une application mobile (iOS) destinée aux étudiants en santé en
 - LAS (Licence avec Accès Santé)
 - EDN (Épreuves Dématérialisées Nationales)
 - ECN (Épreuves Classantes Nationales)
+- Dentaire, pharmacie, maïeutique, kiné
 
 ## Pourquoi CliniCard
 
@@ -29,9 +30,28 @@ Les flashcards génériques ne correspondent pas à vos cours. CliniCard génèr
 - Page d'accueil : https://clinicard.fr/
 - Télécharger sur l'App Store : https://apps.apple.com/app/id6758679816
 - Blog (méthodes de révision) : https://clinicard.fr/blog/
+- Politique de confidentialité : https://clinicard.fr/privacy-policy.html
+
+## Articles de blog
+
 - Méthode des J en médecine : https://clinicard.fr/blog/methode-des-j-repetition-espacee-medecine.html
 - Quelle moyenne pour faire médecine (PASS/LAS) : https://clinicard.fr/blog/quelle-moyenne-pour-faire-medecine-pass.html
-- Politique de confidentialité : https://clinicard.fr/privacy-policy.html
+- Anki en médecine PASS et EDN — guide complet : https://clinicard.fr/blog/anki-medecine-pass-guide-complet.html
+- Active recall — mémoriser vite en PASS et EDN : https://clinicard.fr/blog/active-recall-memoriser-vite-pass-edn.html
+- Créer des flashcards efficaces pour le PASS et l'EDN : https://clinicard.fr/blog/creer-flashcards-efficaces-pass-edn.html
+- La courbe de l'oubli en médecine : https://clinicard.fr/blog/courbe-oubli-memorisation-medecine-pass-edn.html
+- Planning de révisions PASS et EDN : https://clinicard.fr/blog/planning-revisions-pass-edn-methode-hebdomadaire.html
+- Technique Pomodoro en PASS et EDN : https://clinicard.fr/blog/technique-pomodoro-pass-edn-productivite.html
+- Burnout en médecine — tenir sans s'effondrer : https://clinicard.fr/blog/burnout-stress-etudiant-medecine-pass-edn.html
+- Raisonnement clinique aux ECOS — méthode en 5 étapes : https://clinicard.fr/blog/raisonnement-clinique-ecos-methode-5-etapes.html
+- Réussir les ECOS — guide complet : https://clinicard.fr/blog/reussir-ecos-guide-stations-examen-clinique.html
+- Annoncer une mauvaise nouvelle aux ECOS — méthode SPIKES : https://clinicard.fr/blog/annonce-mauvaise-nouvelle-ecos-methode-spikes.html
+- Technique Feynman en médecine : https://clinicard.fr/blog/technique-feynman-medecine-pass-edn.html
+- Syndrome de l'imposteur en médecine : https://clinicard.fr/blog/syndrome-imposteur-etudiant-medecine-pass-edn.html
+
+## Application web
+
+- Application web (sans installation) : https://app.clinicard.fr
 
 ## Contact
 
