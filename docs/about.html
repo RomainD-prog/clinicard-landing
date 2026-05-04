@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Romain D. — Créateur de CliniCard | À propos</title>
+    <meta name="description" content="Romain D. a créé CliniCard pour aider les étudiants en médecine à réviser plus efficacement grâce aux flashcards et à la répétition espacée. Découvrez l'histoire de l'application.">
+    <meta name="author" content="Romain D.">
+    <link rel="canonical" href="https://clinicard.fr/about.html">
+    <meta property="og:type" content="profile">
+    <meta property="og:url" content="https://clinicard.fr/about.html">
+    <meta property="og:title" content="Romain D. — Créateur de CliniCard">
+    <meta property="og:description" content="Romain D. a créé CliniCard pour aider les étudiants en médecine à réviser plus efficacement. Découvrez l'histoire de l'application.">
+    <meta property="og:image" content="https://clinicard.fr/assets/og-image.png">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:site_name" content="CliniCard">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="apple-touch-icon" href="/assets/icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" crossorigin href="https://fonts.gstatic.com/s/playfairdisplay/v40/nuFiD-vYSZviVYUb_rj3ij__anPXPT7Sh2E-.woff2">
+    <link rel="preload" as="font" type="font/woff2" crossorigin href="https://fonts.gstatic.com/s/plusjakartasans/v12/LDIoaomQNQcsA88c7O9yZ4KMCoOg4Jo02SuCgQ.woff2">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"></noscript>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Romain D.",
+      "jobTitle": "Créateur de CliniCard",
+      "url": "https://clinicard.fr/about.html",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "CliniCard",
+        "url": "https://clinicard.fr"
+      },
+      "description": "Développeur et créateur de CliniCard, application de révision médicale par flashcards et QCM pour les étudiants en PASS, LAS et EDN.",
+      "knowsAbout": ["révision médicale", "répétition espacée", "PASS", "LAS", "EDN", "flashcards", "apprentissage actif"]
+    }
+    </script>
+
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .about-hero {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 60%, var(--azure) 100%);
+            padding: 100px 0 56px;
+            color: var(--white);
+        }
+        .about-hero-inner { max-width: 760px; margin: 0 auto; }
+        .about-tag {
+            display: inline-block;
+            background: rgba(255,255,255,0.15);
+            color: rgba(255,255,255,0.9);
+            font-family: var(--font-body);
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.07em;
+            padding: 0.3rem 0.85rem;
+            border-radius: 999px;
+            margin-bottom: 1.25rem;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        .about-title {
+            font-family: var(--font-display);
+            font-size: clamp(1.75rem, 4vw, 2.75rem);
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+        .about-subtitle {
+            font-family: var(--font-body);
+            font-size: 1.1rem;
+            opacity: 0.85;
+            line-height: 1.7;
+        }
+        .about-body { padding: 4rem 0 5rem; }
+        .about-content {
+            max-width: 760px;
+            margin: 0 auto;
+            font-family: var(--font-body);
+            color: var(--body);
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+        .about-profile {
+            display: flex;
+            gap: 2rem;
+            align-items: flex-start;
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-sm);
+        }
+        .about-avatar {
+            flex-shrink: 0;
+            width: 88px;
+            height: 88px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--azure) 0%, var(--navy) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-display);
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--white);
+        }
+        .about-profile-info { flex: 1; }
+        .about-profile-name {
+            font-family: var(--font-display);
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--navy);
+            margin-bottom: 0.25rem;
+        }
+        .about-profile-role {
+            font-family: var(--font-body);
+            font-size: 0.9rem;
+            color: var(--azure);
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+        .about-profile-bio {
+            font-family: var(--font-body);
+            font-size: 0.97rem;
+            color: var(--body);
+            line-height: 1.7;
+            margin: 0;
+        }
+        .about-content h2 {
+            font-family: var(--font-display);
+            font-size: 1.65rem;
+            font-weight: 700;
+            color: var(--navy);
+            margin: 2.5rem 0 1rem;
+            line-height: 1.3;
+        }
+        .about-content p { margin-bottom: 1.25rem; }
+        .about-content strong { color: var(--navy); font-weight: 700; }
+        .about-content a { color: var(--azure); text-decoration: underline; text-underline-offset: 3px; }
+        .callout {
+            background: var(--sky);
+            border-left: 4px solid var(--azure);
+            border-radius: 0 var(--radius-md) var(--radius-md) 0;
+            padding: 1.25rem 1.5rem;
+            margin: 2rem 0;
+        }
+        .callout-title {
+            font-family: var(--font-body);
+            font-weight: 700;
+            color: var(--azure-dark);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+        }
+        .callout p { margin: 0; font-size: 0.97rem; color: var(--navy-mid); }
+        .about-cta {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--azure) 100%);
+            border-radius: var(--radius-xl);
+            padding: 2.25rem 2rem;
+            margin: 3rem 0;
+            text-align: center;
+            color: var(--white);
+        }
+        .about-cta h3 {
+            font-family: var(--font-display);
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+            color: var(--white);
+        }
+        .about-cta p {
+            font-family: var(--font-body);
+            font-size: 0.97rem;
+            opacity: 0.85;
+            margin-bottom: 1.5rem;
+        }
+        .about-cta .btn { background: var(--white); color: var(--navy); font-weight: 700; }
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-family: var(--font-body);
+            font-size: 0.875rem;
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            margin-bottom: 2rem;
+            transition: color 0.15s;
+        }
+        .back-link:hover { color: var(--white); }
+        @media (max-width: 600px) {
+            .about-profile { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="nav">
+                <div class="logo">
+                    <a href="/" style="display:flex;align-items:center;gap:0.5rem;text-decoration:none;">
+                        <picture><source srcset="assets/medflash-logo.webp" type="image/webp"><img src="assets/medflash-logo.png" alt="CliniCard Logo" class="logo-img" width="36" height="36"></picture>
+                        <span class="logo-text">CliniCard</span>
+                    </a>
+                </div>
+                <nav class="nav-links">
+                    <a href="/#fonctionnalites">Fonctionnalités</a>
+                    <a href="/#pourquoi">Pourquoi CliniCard</a>
+                    <a href="/blog/">Blog</a>
+                </nav>
+                <a href="/#telechargement" class="nav-cta">Télécharger</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="about-hero">
+        <div class="container">
+            <div class="about-hero-inner">
+                <a href="/" class="back-link">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+                    Retour à l'accueil
+                </a>
+                <span class="about-tag">À propos</span>
+                <h1 class="about-title">Romain D.</h1>
+                <p class="about-subtitle">Créateur de CliniCard — application de révision médicale pour les étudiants en PASS, LAS et EDN.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-body">
+        <div class="container">
+            <div class="about-content">
+
+                <div class="about-profile">
+                    <div class="about-avatar" aria-hidden="true">R</div>
+                    <div class="about-profile-info">
+                        <p class="about-profile-name">Romain D.</p>
+                        <p class="about-profile-role">Créateur de CliniCard</p>
+                        <p class="about-profile-bio">Développeur passionné par les méthodes d'apprentissage, Romain a créé CliniCard pour répondre à un problème concret : les étudiants en médecine passent trop de temps à préparer leurs supports de révision plutôt qu'à réviser. L'application automatise la création de flashcards et de QCM à partir des cours, pour que chaque heure de révision compte vraiment.</p>
+                    </div>
+                </div>
+
+                <h2>Pourquoi CliniCard a été créé</h2>
+
+                <p>Le PASS et l'EDN imposent un volume de contenu considérable à mémoriser en peu de temps. Les méthodes de révision efficaces — comme la répétition espacée et l'apprentissage actif — sont bien documentées dans la littérature scientifique. Pourtant, leur mise en pratique se heurte à un obstacle majeur : <strong>créer des flashcards de qualité prend des heures</strong>.</p>
+
+                <p>CliniCard est né de ce constat. L'idée : automatiser la création des supports à partir des cours des étudiants eux-mêmes. Pas des flashcards génériques sur la cardiologie ou la pharmacologie — des cartes construites à partir <em>de vos cours</em>, avec <em>votre terminologie</em>, calibrées pour <em>votre concours</em>.</p>
+
+                <div class="callout">
+                    <p class="callout-title">Ce que la recherche appelle le "transfer-appropriate processing"</p>
+                    <p>Mémoriser dans les mêmes termes que ceux appris en cours améliore significativement la rétention à l'examen. C'est le principe fondamental sur lequel repose CliniCard : vos cours en entrée, vos flashcards en sortie.</p>
+                </div>
+
+                <h2>L'approche pédagogique</h2>
+
+                <p>CliniCard repose sur deux mécanismes validés par la recherche en sciences cognitives :</p>
+
+                <p><strong>La répétition espacée</strong> — inspirée de la méthode des J utilisée par de nombreux étudiants en médecine. L'algorithme planifie automatiquement les révisions aux intervalles optimaux (J1, J3, J7, J15, J30) pour maximiser la rétention à long terme avec un minimum de temps de révision.</p>
+
+                <p><strong>L'apprentissage actif (active recall)</strong> — se tester sur ses cours plutôt que de les relire passivement est l'une des stratégies d'apprentissage les plus efficaces, confirmée par de nombreuses méta-analyses. Chaque flashcard et chaque QCM de CliniCard est une occasion de se tester activement.</p>
+
+                <h2>Contact</h2>
+
+                <p>Pour toute question sur CliniCard, un retour sur l'application, ou un bug à signaler :</p>
+
+                <p>
+                    <a href="mailto:clinicardapp@gmail.com">clinicardapp@gmail.com</a>
+                </p>
+
+                <div class="about-cta">
+                    <h3>Essayer CliniCard</h3>
+                    <p>Gratuit sur l'App Store et sur le web — importez vos cours et commencez à réviser en quelques minutes.</p>
+                    <a href="https://apps.apple.com/app/id6758679816" class="btn" target="_blank" rel="noopener">
+                        Télécharger sur l'App Store
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <picture><source srcset="assets/medflash-logo.webp" type="image/webp"><img src="assets/medflash-logo.png" alt="CliniCard Logo" class="logo-img footer-logo-img" width="36" height="36"></picture>
+                        <span class="logo-text footer-logo-text">CliniCard</span>
+                    </div>
+                    <p class="footer-tagline">Réviser intelligemment pour réussir vos concours de médecine.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Produit</h4>
+                        <a href="/#fonctionnalites">Fonctionnalités</a>
+                        <a href="/#telechargement">Télécharger</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Blog</h4>
+                        <a href="blog/">Tous les articles</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Légal</h4>
+                        <a href="privacy-policy.html">Politique de confidentialité</a>
+                        <a href="mentions-legales.html">Mentions légales</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 CliniCard. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
