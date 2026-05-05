@@ -470,51 +470,194 @@
         </div>
     </section>
 
-    <!-- App Screenshots Section -->
-    <section class="screenshots-section">
+    <!-- App Showcase Band -->
+    <section class="showcase-band">
         <div class="container">
             <div class="section-header">
                 <span class="section-label">L'application</span>
-                <h2 class="section-title">CliniCard en images</h2>
-                <p class="section-subtitle">Importez un cours, obtenez vos flashcards et QCM en quelques secondes. Disponible sur iOS et sur le web.</p>
+                <h2 class="section-title">Tout en une seule app</h2>
+                <p class="section-subtitle">Importez un cours, révisez avec les flashcards, entraînez-vous aux QCM. Sur iOS et sur le web.</p>
             </div>
-            <div class="screenshots-strip">
-                <div class="screenshot-item">
-                    <picture>
-                        <source srcset="assets/screen-1.webp" type="image/webp">
-                        <img src="assets/screen-1.jpeg" alt="CliniCard — écran d'accueil et decks de révision" loading="lazy" width="158" height="340">
-                    </picture>
+
+            <div class="sb-inner">
+
+                <!-- Feature list (left) -->
+                <div class="sb-features">
+                    <div class="sb-feat is-active" data-feat="0">
+                        <div class="sb-feat-track"></div>
+                        <div class="sb-feat-body">
+                            <span class="sb-feat-num">01</span>
+                            <h3 class="sb-feat-title">Import &amp; Génération</h3>
+                            <p class="sb-feat-desc">Importez vos cours en PDF, photo ou texte. CliniCard extrait les notions clés et génère automatiquement des flashcards + QCM orientés concours en 1 à 3 minutes.</p>
+                            <div class="sb-feat-chips">
+                                <span class="sc-chip sc-chip-green">PDF, photo, texte</span>
+                                <span class="sc-chip sc-chip-blue">Génération auto</span>
+                                <span class="sc-chip sc-chip-gray">Notifié quand prêt</span>
+                            </div>
+                            <div class="sb-feat-progress"><div class="sb-feat-bar"></div></div>
+                        </div>
+                    </div>
+                    <div class="sb-feat" data-feat="1">
+                        <div class="sb-feat-track"></div>
+                        <div class="sb-feat-body">
+                            <span class="sb-feat-num">02</span>
+                            <h3 class="sb-feat-title">Révision avec flashcards</h3>
+                            <p class="sb-feat-desc">Question → réflexion → réponse. L'algorithme de répétition espacée adapte les intervalles à votre niveau pour mémoriser durablement.</p>
+                            <div class="sb-feat-chips">
+                                <span class="sc-chip sc-chip-green">Répétition espacée</span>
+                                <span class="sc-chip sc-chip-orange">4 niveaux d'éval.</span>
+                            </div>
+                            <div class="sb-feat-progress"><div class="sb-feat-bar"></div></div>
+                        </div>
+                    </div>
+                    <div class="sb-feat" data-feat="2">
+                        <div class="sb-feat-track"></div>
+                        <div class="sb-feat-body">
+                            <span class="sb-feat-num">03</span>
+                            <h3 class="sb-feat-title">QCM concours</h3>
+                            <p class="sb-feat-desc">Des QCM dans la formulation exacte de votre concours, générés à partir de vos cours. Correction détaillée après chaque question.</p>
+                            <div class="sb-feat-chips">
+                                <span class="sc-chip sc-chip-blue">Style PASS, LAS, EDN</span>
+                                <span class="sc-chip sc-chip-red">Correction immédiate</span>
+                            </div>
+                            <div class="sb-feat-progress"><div class="sb-feat-bar"></div></div>
+                        </div>
+                    </div>
                 </div>
-                <div class="screenshot-item">
-                    <picture>
-                        <source srcset="assets/screen-2.webp" type="image/webp">
-                        <img src="assets/screen-2.jpeg" alt="CliniCard — génération de flashcards depuis un cours PDF" loading="lazy" width="158" height="340">
-                    </picture>
+
+                <!-- Phone mockup (right) -->
+                <div class="sb-phone-area">
+                    <div class="sb-phone-glow" id="sbPhoneGlow"></div>
+                    <div class="phone-frame">
+                        <div class="phone-island"></div>
+                        <div class="phone-screen">
+
+                            <!-- Screen 0: Generation -->
+                            <div class="sb-screen is-active pscreen-gen" data-screen="0">
+                                <div class="pgen-gear-wrap">
+                                    <div class="pgen-gear">
+                                        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#1A6BC0" stroke-width="1.6" stroke-linecap="round"><path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1Z"/></svg>
+                                    </div>
+                                </div>
+                                <p class="pgen-title">Génération en cours</p>
+                                <p class="pgen-sub">Ton deck est en préparation.<br>1 à 3 minutes en moyenne.</p>
+                                <div class="pgen-steps">
+                                    <div class="pgen-step">
+                                        <div class="pgen-icon pgen-icon-1"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#fff" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                                        <div class="pgen-step-body">
+                                            <span class="pgen-sname pgen-sname-1">Extraction</span>
+                                            <span class="pgen-ssub pgen-ssub-1">Texte médical extrait et structuré</span>
+                                        </div>
+                                    </div>
+                                    <div class="pgen-connector pgen-c1"></div>
+                                    <div class="pgen-step">
+                                        <div class="pgen-icon pgen-icon-2"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#fff" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                                        <div class="pgen-step-body">
+                                            <span class="pgen-sname pgen-sname-2">Flashcards</span>
+                                            <span class="pgen-ssub pgen-ssub-2">Identification des points clés…</span>
+                                        </div>
+                                    </div>
+                                    <div class="pgen-connector pgen-c2"></div>
+                                    <div class="pgen-step">
+                                        <div class="pgen-icon pgen-icon-3"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#fff" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                                        <div class="pgen-step-body">
+                                            <span class="pgen-sname pgen-sname-3">Finalisation</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="pgen-notif">
+                                    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#1A6BC0" stroke-width="2" stroke-linecap="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+                                    <span>Tu peux quitter — tu seras notifié.</span>
+                                </div>
+                                <button class="pgen-btn">Continuer en arrière-plan</button>
+                            </div>
+
+                            <!-- Screen 1: Flashcard -->
+                            <div class="sb-screen pscreen-fc" data-screen="1">
+                                <div class="pfc-topbar">
+                                    <span class="pfc-x">✕</span>
+                                    <span class="pfc-titlebar">Révision</span>
+                                    <span class="pfc-count">1/60</span>
+                                </div>
+                                <div class="pfc-track"><div class="pfc-fill"></div></div>
+                                <div class="pfc-scene">
+                                    <div class="pfc-card">
+                                        <div class="pfc-front">
+                                            <div class="pfc-front-inner">
+                                                <div class="pfc-top-tags">
+                                                    <span class="pfc-tag-uni">UNI</span>
+                                                    <span class="pfc-tag-deck">Cardiologie · Péricardite</span>
+                                                </div>
+                                                <p class="pfc-question">Quels sont les signes de gravité d'une péricardite aiguë&nbsp;?</p>
+                                                <p class="pfc-hint">Toucher la carte pour la retourner</p>
+                                            </div>
+                                        </div>
+                                        <div class="pfc-back">
+                                            <div class="pfc-back-inner">
+                                                <span class="pfc-back-label">RÉPONSE</span>
+                                                <ul class="pfc-ans-list">
+                                                    <li>Tamponnade péricardique</li>
+                                                    <li>Épanchement abondant (écho)</li>
+                                                    <li>Myopéricardite associée</li>
+                                                    <li>Fièvre &gt; 38°C, CRP élevée</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="pfc-ratings">
+                                    <div class="pfc-rate pfc-rate-review"><span>À revoir</span><small>&lt;1m</small></div>
+                                    <div class="pfc-rate pfc-rate-hard"><span>Difficile</span><small>2j</small></div>
+                                    <div class="pfc-rate pfc-rate-good"><span>Bien</span><small>4j</small></div>
+                                    <div class="pfc-rate pfc-rate-easy"><span>Facile</span><small>7j</small></div>
+                                </div>
+                            </div>
+
+                            <!-- Screen 2: QCM -->
+                            <div class="sb-screen pscreen-qcm" data-screen="2">
+                                <div class="pqcm-topbar">
+                                    <span class="pqcm-back">‹</span>
+                                    <span class="pqcm-title">QCM</span>
+                                    <span class="pqcm-score">Score 0</span>
+                                </div>
+                                <div class="pqcm-meta">Question 2 / 16</div>
+                                <div class="pqcm-qcard">
+                                    <div class="pqcm-qtags">
+                                        <span class="pqcm-qtag">QCM</span>
+                                        <span class="pqcm-nb">3 bonnes réponses</span>
+                                    </div>
+                                    <p class="pqcm-question">Concernant le diagnostic de péricardite aiguë, quelle(s) proposition(s) est/sont exacte(s)&nbsp;?</p>
+                                </div>
+                                <div class="pqcm-answers">
+                                    <div class="pqcm-ans pqcm-ans-correct pqcm-a1">
+                                        <span class="pqcm-letter">A</span>
+                                        <span class="pqcm-atext">La douleur thoracique est soulagée par la position penchée en avant.</span>
+                                        <span class="pqcm-mark pqcm-ok">✓</span>
+                                    </div>
+                                    <div class="pqcm-ans pqcm-ans-wrong pqcm-a2">
+                                        <span class="pqcm-letter">B</span>
+                                        <span class="pqcm-atext">L'absence de frottement péricardique élimine le diagnostic.</span>
+                                        <span class="pqcm-mark pqcm-bad">✗</span>
+                                    </div>
+                                    <div class="pqcm-ans pqcm-ans-correct pqcm-a3">
+                                        <span class="pqcm-letter">C</span>
+                                        <span class="pqcm-atext">Un sus-décalage ST concave est un signe ECG de stade I.</span>
+                                        <span class="pqcm-mark pqcm-ok">✓</span>
+                                    </div>
+                                    <div class="pqcm-ans pqcm-ans-neutral pqcm-a4">
+                                        <span class="pqcm-letter">D</span>
+                                        <span class="pqcm-atext">La TDM thoracique est l'examen de 1ère intention.</span>
+                                    </div>
+                                </div>
+                                <div class="pqcm-result">
+                                    <span>✗ Incorrect — Réponses : A, C</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
-                <div class="screenshot-item">
-                    <picture>
-                        <source srcset="assets/screen-3.webp" type="image/webp">
-                        <img src="assets/screen-3.jpeg" alt="CliniCard — flashcard médicale avec répétition espacée" loading="lazy" width="158" height="340">
-                    </picture>
-                </div>
-                <div class="screenshot-item">
-                    <picture>
-                        <source srcset="assets/screen-4.webp" type="image/webp">
-                        <img src="assets/screen-4.jpeg" alt="CliniCard — QCM orienté concours PASS EDN" loading="lazy" width="158" height="340">
-                    </picture>
-                </div>
-                <div class="screenshot-item">
-                    <picture>
-                        <source srcset="assets/screen-5.webp" type="image/webp">
-                        <img src="assets/screen-5.jpeg" alt="CliniCard — suivi de progression et statistiques" loading="lazy" width="158" height="340">
-                    </picture>
-                </div>
-                <div class="screenshot-item">
-                    <picture>
-                        <source srcset="assets/screen-6.webp" type="image/webp">
-                        <img src="assets/screen-6.jpeg" alt="CliniCard — import de cours et création de decks" loading="lazy" width="158" height="340">
-                    </picture>
-                </div>
+
             </div>
         </div>
     </section>

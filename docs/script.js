@@ -156,6 +156,56 @@ if (yearEl) yearEl.textContent = `© ${new Date().getFullYear()} CliniCard. Tous
 
 console.log('CliniCard loaded.');
 
+// ── Showcase Band Carousel ──
+(function () {
+  const band = document.querySelector('.showcase-band');
+  if (!band) return;
+
+  const feats   = Array.from(band.querySelectorAll('.sb-feat'));
+  const screens = Array.from(band.querySelectorAll('.sb-screen'));
+  const glow    = band.querySelector('#sbPhoneGlow');
+  const glowClasses = ['', 'glow-green', 'glow-purple'];
+  let current = 0;
+  let timer = null;
+
+  function activate(idx) {
+    feats[current].classList.remove('is-active');
+    screens[current].classList.remove('is-active');
+
+    current = (idx + feats.length) % feats.length;
+
+    feats[current].classList.add('is-active');
+    screens[current].classList.add('is-active');
+
+    // Restart bar animation
+    const bar = feats[current].querySelector('.sb-feat-bar');
+    if (bar) {
+      bar.style.animation = 'none';
+      bar.offsetHeight;
+      bar.style.animation = '';
+    }
+
+    // Swap glow colour
+    if (glow) {
+      glow.className = 'sb-phone-glow' + (glowClasses[current] ? ' ' + glowClasses[current] : '');
+    }
+  }
+
+  function startTimer() {
+    timer = setInterval(() => activate(current + 1), 6000);
+  }
+  function stopTimer() { clearInterval(timer); timer = null; }
+
+  feats.forEach((feat, i) => {
+    feat.addEventListener('click', () => { stopTimer(); activate(i); startTimer(); });
+  });
+
+  band.addEventListener('mouseenter', stopTimer);
+  band.addEventListener('mouseleave', startTimer);
+
+  startTimer();
+}());
+
 // ── Flashcard hero toggle ──
 (function () {
   const btn = document.getElementById('hfcToggle');
