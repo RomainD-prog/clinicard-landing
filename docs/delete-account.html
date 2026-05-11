@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supprimer mon compte — CliniCard</title>
+    <link rel="canonical" href="https://clinicard.fr/delete-account.html">
+    <meta name="robots" content="noindex">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 40px 20px 80px;
+            line-height: 1.65;
+            color: #1a1a2e;
+            background: #fff;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 48px;
+            text-decoration: none;
+        }
+        .logo img {
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+        }
+        .logo span {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #1D4ED8;
+        }
+        h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #1a1a2e;
+            margin-bottom: 8px;
+        }
+        .subtitle {
+            color: #6b7280;
+            font-size: 1rem;
+            margin-bottom: 40px;
+        }
+        .card {
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 28px 32px;
+            margin-bottom: 24px;
+        }
+        .card-primary {
+            border-color: #1D4ED8;
+            background: #eff6ff;
+        }
+        .card h2 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #1D4ED8;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .card h2 .icon {
+            font-size: 1.2rem;
+        }
+        ol, ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 8px;
+            color: #374151;
+        }
+        li strong {
+            color: #1a1a2e;
+        }
+        .step-badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 22px;
+            height: 22px;
+            background: #1D4ED8;
+            color: #fff;
+            border-radius: 50%;
+            font-size: 0.75rem;
+            font-weight: 700;
+            margin-right: 8px;
+            flex-shrink: 0;
+        }
+        .step-row {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 10px;
+        }
+        .step-text {
+            color: #374151;
+            padding-top: 2px;
+        }
+        .divider {
+            border: none;
+            border-top: 1px solid #e5e7eb;
+            margin: 32px 0;
+        }
+        .data-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-top: 16px;
+        }
+        .data-col h3 {
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 10px;
+        }
+        .data-col.deleted h3 { color: #dc2626; }
+        .data-col.kept h3 { color: #059669; }
+        .data-col ul {
+            padding-left: 16px;
+        }
+        .data-col li {
+            font-size: 0.9rem;
+            margin-bottom: 6px;
+        }
+        .email-section {
+            background: #f9fafb;
+            border-radius: 12px;
+            padding: 24px 28px;
+            margin-top: 8px;
+        }
+        .email-section p {
+            color: #374151;
+            margin-bottom: 12px;
+        }
+        .email-link {
+            display: inline-block;
+            background: #1D4ED8;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: background 0.15s;
+        }
+        .email-link:hover {
+            background: #1e40af;
+        }
+        .note {
+            font-size: 0.85rem;
+            color: #9ca3af;
+            margin-top: 10px;
+        }
+        .footer-back {
+            margin-top: 48px;
+        }
+        .footer-back a {
+            color: #1D4ED8;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        .footer-back a:hover { text-decoration: underline; }
+        @media (max-width: 540px) {
+            body { padding: 24px 16px 60px; }
+            h1 { font-size: 1.5rem; }
+            .card { padding: 20px; }
+            .data-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<a href="https://clinicard.fr" class="logo">
+    <img src="/assets/logo.png" alt="CliniCard logo">
+    <span>CliniCard</span>
+</a>
+
+<h1>Supprimer mon compte</h1>
+<p class="subtitle">Votre compte et vos données peuvent être supprimés à tout moment, sans délai.</p>
+
+<div class="card card-primary">
+    <h2><span class="icon">📱</span> Procédure dans l'application</h2>
+    <div class="step-row">
+        <span class="step-badge">1</span>
+        <span class="step-text">Ouvrez l'application CliniCard sur votre iPhone.</span>
+    </div>
+    <div class="step-row">
+        <span class="step-badge">2</span>
+        <span class="step-text">Appuyez sur <strong>Profil</strong> (icône en bas à droite).</span>
+    </div>
+    <div class="step-row">
+        <span class="step-badge">3</span>
+        <span class="step-text">Faites défiler jusqu'à <strong>Paramètres</strong>.</span>
+    </div>
+    <div class="step-row">
+        <span class="step-badge">4</span>
+        <span class="step-text">Appuyez sur <strong>Supprimer mon compte</strong>.</span>
+    </div>
+    <div class="step-row">
+        <span class="step-badge">5</span>
+        <span class="step-text">Confirmez la suppression. L'action est immédiate et irréversible.</span>
+    </div>
+</div>
+
+<hr class="divider">
+
+<div class="card">
+    <h2><span class="icon">🗂</span> Ce qui est supprimé</h2>
+    <div class="data-grid">
+        <div class="data-col deleted">
+            <h3>Supprimé définitivement</h3>
+            <ul>
+                <li>Votre compte et identifiants</li>
+                <li>Votre historique de révision</li>
+                <li>Vos statistiques et progression</li>
+                <li>Vos préférences et paramètres</li>
+                <li>Vos données de connexion (email, Apple ID)</li>
+            </ul>
+        </div>
+        <div class="data-col kept">
+            <h3>Non concerné</h3>
+            <ul>
+                <li>Contenu médical partagé (fiches, QCM)</li>
+                <li>Données anonymisées agrégées</li>
+                <li>Logs de sécurité (conservés 30 j.)</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<hr class="divider">
+
+<h2 style="font-size:1.1rem;font-weight:600;color:#1a1a2e;margin-bottom:16px;">Vous n'avez plus accès à l'application&nbsp;?</h2>
+<div class="email-section">
+    <p>Envoyez-nous un email depuis l'adresse liée à votre compte. Nous supprimerons votre compte dans un délai de <strong>48&nbsp;h</strong>, conformément au RGPD.</p>
+    <a href="mailto:contact@clinicard.fr?subject=Demande%20de%20suppression%20de%20compte&body=Bonjour%2C%0A%0AJe%20souhaite%20supprimer%20mon%20compte%20CliniCard%20associ%C3%A9%20%C3%A0%20cette%20adresse%20email.%0A%0AMerci." class="email-link">
+        Envoyer la demande par email
+    </a>
+    <p class="note">contact@clinicard.fr — réponse sous 48 h ouvrées</p>
+</div>
+
+<div class="footer-back">
+    <a href="https://clinicard.fr">← Retour à clinicard.fr</a>
+</div>
+
+</body>
+</html>
