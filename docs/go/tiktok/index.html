@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>CliniCard</title>
+  <style>
+    body{margin:0;background:#111F3A;display:flex;align-items:center;
+    justify-content:center;min-height:100vh;font-family:system-ui,sans-serif}
+    .msg{color:rgba(255,255,255,0.7);font-size:15px;text-align:center}
+  </style>
+</head>
+<body>
+  <div class="msg">Ouverture de CliniCard...</div>
+  <script>
+    const SUPABASE_URL = "https://fcynbbggrholkmxpuftu.supabase.co";
+    const ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZjeW5iYmdncmhvbGtteHB1ZnR1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3Njc5ODYxOTYsImV4cCI6MjA4MzU2MjE5Nn0.CshjCKwclRzNJAI4BIruP1aYwTakeTx9SYKFYPxbmvI";
+    const IOS = "https://apps.apple.com/fr/app/clinicard/id6744942156";
+    const ANDROID = "https://play.google.com/store/apps/details?id=com.romaindurieux.medflash";
+
+    const parts = window.location.pathname.split("/").filter(Boolean);
+    const params = new URLSearchParams(window.location.search);
+    const source = (params.get("s") || parts[parts.length - 1] || "unknown").toLowerCase();
+    const ua = navigator.userAgent.toLowerCase();
+
+    fetch(`${SUPABASE_URL}/rest/v1/link_clicks`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "apikey": ANON_KEY,
+        "Authorization": `Bearer ${ANON_KEY}`,
+        "Prefer": "return=minimal"
+      },
+      body: JSON.stringify({
+        source,
+        platform: /iphone|ipad|ipod/.test(ua) ? "ios" : /android/.test(ua) ? "android" : "web",
+        user_agent: navigator.userAgent.slice(0, 300)
+      })
+    }).catch(() => {});
+
+    setTimeout(() => {
+      window.location.href = /android/.test(ua) ? ANDROID : IOS;
+    }, 300);
+  </script>
+</body>
+</html>
