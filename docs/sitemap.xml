@@ -6,7 +6,7 @@
   </url>
   <url>
     <loc>https://clinicard.fr/blog/</loc>
-    <lastmod>2026-05-09</lastmod>
+    <lastmod>2026-05-13</lastmod>
   </url>
   <url>
     <loc>https://clinicard.fr/blog/syndrome-imposteur-etudiant-medecine-pass-edn.html</loc>
@@ -79,5 +79,11 @@
   <url>
     <loc>https://clinicard.fr/blog/examen-physique-ecos-edn-gestes-automatiser.html</loc>
     <lastmod>2026-05-09</lastmod>
+  </url>
+  <url>
+    <loc>https://clinicard.fr/blog/methode-cornell-prise-notes-medecine-pass-edn.html</loc>
+    <lastmod>2026-05-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>
