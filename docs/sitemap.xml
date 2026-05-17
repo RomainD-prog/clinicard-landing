@@ -6,7 +6,7 @@
   </url>
   <url>
     <loc>https://clinicard.fr/blog/</loc>
-    <lastmod>2026-05-13</lastmod>
+    <lastmod>2026-05-17</lastmod>
   </url>
   <url>
     <loc>https://clinicard.fr/blog/syndrome-imposteur-etudiant-medecine-pass-edn.html</loc>
@@ -83,6 +83,12 @@
   <url>
     <loc>https://clinicard.fr/blog/methode-cornell-prise-notes-medecine-pass-edn.html</loc>
     <lastmod>2026-05-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://clinicard.fr/blog/sommeil-revision-medecine-pass-edn.html</loc>
+    <lastmod>2026-05-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
