@@ -3,86 +3,24 @@
   <url>
     <loc>https://clinicard.fr/</loc>
     <lastmod>2026-05-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
   </url>
   <url>
     <loc>https://clinicard.fr/blog/</loc>
     <lastmod>2026-05-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://clinicard.fr/blog/syndrome-imposteur-etudiant-medecine-pass-edn.html</loc>
-    <lastmod>2026-05-01</lastmod>
+    <loc>https://clinicard.fr/blog/education-therapeutique-ecos-edn-expliquer-pathologie.html</loc>
+    <lastmod>2026-05-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://clinicard.fr/blog/technique-feynman-medecine-pass-edn.html</loc>
-    <lastmod>2026-04-29</lastmod>
-  </url>
-  <url>
-    <loc>https://clinicard.fr/blog/annonce-mauvaise-nouvelle-ecos-methode-spikes.html</loc>
-    <lastmod>2026-04-27</lastmod>
-  </url>
-  <url>
-    <loc>https://clinicard.fr/blog/anki-medecine-pass-guide-complet.html</loc>
-    <lastmod>2026-04-21</lastmod>
-  </url>
-  <url>
-    <loc>https://clinicard.fr/blog/technique-pomodoro-pass-edn-productivite.html</loc>
-    <lastmod>2026-04-17</lastmod>
-  </url>
-  <url>
-    <loc>https://clinicard.fr/blog/planning-revisions-pass-edn-methode-hebdomadaire.html</loc>
-    <lastmod>2026-04-13</lastmod>
-  </url>
-  <url>
-    <loc>https://clinicard.fr/blog/burnout-stress-etudiant-medecine-pass-edn.html</loc>
-    <lastmod>2026-04-18</lastmod>
-  </url>
-  <url>
-    <loc>https://clinicard.fr/blog/courbe-oubli-memorisation-medecine-pass-edn.html</loc>
-    <lastmod>2026-04-18</lastmod>
-  </url>
-  <url>
-    <loc>https://clinicard.fr/blog/raisonnement-clinique-ecos-methode-5-etapes.html</loc>
-    <lastmod>2026-04-18</lastmod>
-  </url>
-  <url>
-    <loc>https://clinicard.fr/blog/active-recall-memoriser-vite-pass-edn.html</loc>
-    <lastmod>2026-04-06</lastmod>
-  </url>
-  <url>
-    <loc>https://clinicard.fr/blog/reussir-ecos-guide-stations-examen-clinique.html</loc>
-    <lastmod>2026-04-06</lastmod>
-  </url>
-  <url>
-    <loc>https://clinicard.fr/blog/creer-flashcards-efficaces-pass-edn.html</loc>
-    <lastmod>2026-03-28</lastmod>
-  </url>
-  <url>
-    <loc>https://clinicard.fr/blog/quelle-moyenne-pour-faire-medecine-pass.html</loc>
-    <lastmod>2026-03-28</lastmod>
-  </url>
-  <url>
-    <loc>https://clinicard.fr/blog/methode-des-j-repetition-espacee-medecine.html</loc>
-    <lastmod>2026-03-28</lastmod>
-  </url>
-  <url>
-    <loc>https://clinicard.fr/blog/mnemotechniques-medecine-pass-edn-astuces-memoire.html</loc>
-    <lastmod>2026-05-05</lastmod>
-  </url>
-  <url>
-    <loc>https://clinicard.fr/about.html</loc>
-    <lastmod>2026-05-04</lastmod>
-  </url>
-  <url>
-    <loc>https://clinicard.fr/privacy-policy.html</loc>
-    <lastmod>2026-02-13</lastmod>
-  </url>
-  <url>
-    <loc>https://clinicard.fr/blog/examen-physique-ecos-edn-gestes-automatiser.html</loc>
-    <lastmod>2026-05-09</lastmod>
-  </url>
-  <url>
-    <loc>https://clinicard.fr/blog/methode-cornell-prise-notes-medecine-pass-edn.html</loc>
-    <lastmod>2026-05-13</lastmod>
+    <loc>https://clinicard.fr/blog/memoriser-pharmacologie-pass-edn-methodes-dci.html</loc>
+    <lastmod>2026-05-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -93,15 +31,117 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://clinicard.fr/blog/memoriser-pharmacologie-pass-edn-methodes-dci</loc>
-    <lastmod>2026-05-25</lastmod>
+    <loc>https://clinicard.fr/blog/methode-cornell-prise-notes-medecine-pass-edn.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://clinicard.fr/blog/education-therapeutique-ecos-edn-expliquer-pathologie</loc>
-    <lastmod>2026-05-29</lastmod>
+    <loc>https://clinicard.fr/blog/examen-physique-ecos-edn-gestes-automatiser.html</loc>
+    <lastmod>2026-05-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://clinicard.fr/blog/mnemotechniques-medecine-pass-edn-astuces-memoire.html</loc>
+    <lastmod>2026-05-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://clinicard.fr/about.html</loc>
+    <lastmod>2026-05-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://clinicard.fr/blog/syndrome-imposteur-etudiant-medecine-pass-edn.html</loc>
+    <lastmod>2026-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://clinicard.fr/blog/technique-feynman-medecine-pass-edn.html</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://clinicard.fr/blog/annonce-mauvaise-nouvelle-ecos-methode-spikes.html</loc>
+    <lastmod>2026-04-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://clinicard.fr/blog/anki-medecine-pass-guide-complet.html</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://clinicard.fr/blog/burnout-stress-etudiant-medecine-pass-edn.html</loc>
+    <lastmod>2026-04-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://clinicard.fr/blog/courbe-oubli-memorisation-medecine-pass-edn.html</loc>
+    <lastmod>2026-04-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://clinicard.fr/blog/raisonnement-clinique-ecos-methode-5-etapes.html</loc>
+    <lastmod>2026-04-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://clinicard.fr/blog/technique-pomodoro-pass-edn-productivite.html</loc>
+    <lastmod>2026-04-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://clinicard.fr/blog/planning-revisions-pass-edn-methode-hebdomadaire.html</loc>
+    <lastmod>2026-04-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://clinicard.fr/blog/active-recall-memoriser-vite-pass-edn.html</loc>
+    <lastmod>2026-04-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://clinicard.fr/blog/reussir-ecos-guide-stations-examen-clinique.html</loc>
+    <lastmod>2026-04-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://clinicard.fr/blog/creer-flashcards-efficaces-pass-edn.html</loc>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://clinicard.fr/blog/quelle-moyenne-pour-faire-medecine-pass.html</loc>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://clinicard.fr/blog/methode-des-j-repetition-espacee-medecine.html</loc>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://clinicard.fr/privacy-policy.html</loc>
+    <lastmod>2026-02-13</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
 </urlset>

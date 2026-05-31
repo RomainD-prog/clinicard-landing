@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
+Disallow: /go/
+Disallow: /auth-redirect.html
+Disallow: /google696945a981b3fcb2.html
+Disallow: /google94af8d186d7aab2d.html
 
 Sitemap: https://clinicard.fr/sitemap.xml
