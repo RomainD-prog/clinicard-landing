@@ -117,6 +117,69 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+// ── In-app browser handling (TikTok, Instagram, Snapchat…) ──
+// Quand on arrive depuis un lien posté dans TikTok/Insta/etc., la page s'ouvre
+// dans une webview interne, pas dans Safari. Dans ces webviews, les liens
+// "apps.apple.com" n'ouvrent souvent PAS l'App Store. On tente alors le schéma
+// natif itms-apps:// (qui sort vers l'App Store) et on affiche une bannière
+// expliquant comment ouvrir la page dans le navigateur.
+(function () {
+  const ua = navigator.userAgent || navigator.vendor || '';
+  const isIOS = /iPad|iPhone|iPod/.test(ua) && !window.MSStream;
+  const isInApp = /TikTok|musical_ly|Bytedance|Instagram|FBAN|FBAV|FB_IAB|Snapchat|Line\/|Pinterest|LinkedIn/i.test(ua);
+
+  if (!isInApp) return;
+
+  const APP_ID = 'id6758679816';
+  const APP_STORE_SCHEME = 'itms-apps://apps.apple.com/app/' + APP_ID;
+
+  document.addEventListener('DOMContentLoaded', () => {
+    // 1) Au clic sur un bouton App Store, tenter le schéma natif (iOS)
+    document.querySelectorAll('a[href*="apps.apple.com"]').forEach(link => {
+      link.addEventListener('click', (e) => {
+        if (isIOS) {
+          e.preventDefault();
+          // Le schéma itms-apps:// sort de la plupart des webviews vers l'App Store
+          window.location.href = APP_STORE_SCHEME;
+        }
+        showInAppBanner();
+      });
+    });
+
+    // 2) Bannière permanente expliquant comment ouvrir dans le navigateur
+    showInAppBanner();
+  });
+
+  function showInAppBanner() {
+    if (document.getElementById('inAppBanner')) return;
+    if (sessionStorage.getItem('inapp-banner-dismissed')) return;
+
+    const isAndroid = /android/i.test(ua);
+    const tip = isIOS
+      ? 'touche le menu <strong>•••</strong> en haut à droite, puis <strong>« Ouvrir dans le navigateur »</strong>'
+      : (isAndroid
+          ? 'touche le menu <strong>⋮</strong> en haut à droite, puis <strong>« Ouvrir dans Chrome »</strong>'
+          : 'ouvre cette page dans ton navigateur (Safari / Chrome)');
+
+    const banner = document.createElement('div');
+    banner.id = 'inAppBanner';
+    banner.className = 'inapp-banner';
+    banner.innerHTML =
+      '<div class="inapp-banner-inner">' +
+        '<span class="inapp-banner-text">📲 Pour installer CliniCard, ' + tip + '.</span>' +
+        '<button type="button" class="inapp-banner-close" aria-label="Fermer">&times;</button>' +
+      '</div>';
+    document.body.appendChild(banner);
+    document.body.classList.add('has-inapp-banner');
+
+    banner.querySelector('.inapp-banner-close').addEventListener('click', () => {
+      banner.remove();
+      document.body.classList.remove('has-inapp-banner');
+      sessionStorage.setItem('inapp-banner-dismissed', '1');
+    });
+  }
+}());
+
 // Announce bar dismiss
 const announceBar = document.getElementById('announceBar');
 const announceClose = document.getElementById('announceClose');
