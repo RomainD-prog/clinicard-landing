@@ -285,6 +285,53 @@ console.log('CliniCard loaded.');
   });
 }());
 
+// ── Sticky mobile download dock ──
+// Visible une fois le hero dépassé, masqué quand une section avec son propre
+// CTA de téléchargement est à l'écran (download, CTA finale, footer).
+(function () {
+  const dock = document.getElementById('mobileDock');
+  const hero = document.querySelector('.hero');
+  if (!dock || !hero || !('IntersectionObserver' in window)) return;
+
+  let pastHero = false;
+  const visibleZones = new Set();
+
+  const update = () => {
+    dock.classList.toggle('is-visible', pastHero && visibleZones.size === 0);
+  };
+
+  new IntersectionObserver(([entry]) => {
+    pastHero = !entry.isIntersecting;
+    update();
+  }, { threshold: 0 }).observe(hero);
+
+  const zoneObserver = new IntersectionObserver((entries) => {
+    entries.forEach(en => {
+      if (en.isIntersecting) visibleZones.add(en.target);
+      else visibleZones.delete(en.target);
+    });
+    update();
+  }, { threshold: 0.15 });
+  document.querySelectorAll('#telechargement, .cta-section, .footer').forEach(z => zoneObserver.observe(z));
+}());
+
+// ── GA : suivi des clics CTA (App Store / app web) ──
+(function () {
+  document.addEventListener('click', (e) => {
+    if (typeof gtag !== 'function') return;
+    const link = e.target.closest('a[href]');
+    if (!link) return;
+    const href = link.href || '';
+    const section = link.closest('[id], section, header, footer');
+    const label = section?.id || section?.className?.split(' ')[0] || 'page';
+    if (href.includes('apps.apple.com') || href.startsWith('itms-apps')) {
+      gtag('event', 'cta_app_store_click', { event_category: 'conversion', event_label: label });
+    } else if (href.includes('app.clinicard.fr')) {
+      gtag('event', 'cta_web_app_click', { event_category: 'conversion', event_label: label });
+    }
+  }, { capture: true });
+}());
+
 // ── FAQ Accordion & Tabs ──
 (function () {
   // Tabs
