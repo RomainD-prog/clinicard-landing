@@ -36,10 +36,21 @@ const revealObserver = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
 
-document.querySelectorAll('.feature-card, .why-item, .testimonial-card').forEach((el, i) => {
+// Stagger computed per parent group (not globally) so late sections
+// don't inherit seconds of cumulative delay.
+const groupCounts = new Map();
+document.querySelectorAll(
+  '.feature-card, .why-item, .testimonial-card, .testimonial-item, ' +
+  '.section-header, .why-header, .testimonials-header, .faq-header, .download-header, ' +
+  '.blog-preview-card, .store-button, .download-note, .webcta-inner, .faq-item'
+).forEach((el) => {
+  const parent = el.parentElement;
+  const idx = groupCounts.get(parent) || 0;
+  groupCounts.set(parent, idx + 1);
+  const delay = Math.min(idx * 0.08, 0.5);
   el.style.opacity = '0';
-  el.style.transform = 'translateY(18px)';
-  el.style.transition = `opacity 0.55s ease ${i * 0.06}s, transform 0.55s ease ${i * 0.06}s`;
+  el.style.transform = 'translateY(20px)';
+  el.style.transition = `opacity 0.6s cubic-bezier(0.22,1,0.36,1) ${delay}s, transform 0.6s cubic-bezier(0.22,1,0.36,1) ${delay}s`;
   revealObserver.observe(el);
 });
 
@@ -330,6 +341,36 @@ console.log('CliniCard loaded.');
       gtag('event', 'cta_web_app_click', { event_category: 'conversion', event_label: label });
     }
   }, { capture: true });
+}());
+
+// ── Hero flashcard 3D tilt (desktop, pointer fine only) ──
+(function () {
+  const wrap = document.querySelector('.hero-fc-wrap');
+  const card = document.querySelector('.hero-fc');
+  if (!wrap || !card) return;
+  if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  wrap.style.perspective = '900px';
+  let raf = null;
+
+  // L'animation de flottement pilote `transform` : on la coupe pendant le tilt.
+  wrap.addEventListener('mouseenter', () => { card.style.animation = 'none'; });
+  wrap.addEventListener('mousemove', (e) => {
+    if (raf) return;
+    raf = requestAnimationFrame(() => {
+      const r = wrap.getBoundingClientRect();
+      const x = (e.clientX - r.left) / r.width - 0.5;
+      const y = (e.clientY - r.top) / r.height - 0.5;
+      card.style.transform =
+        `rotate(-1.5deg) rotateX(${(-y * 7).toFixed(2)}deg) rotateY(${(x * 9).toFixed(2)}deg) translateY(-4px)`;
+      raf = null;
+    });
+  });
+  wrap.addEventListener('mouseleave', () => {
+    card.style.transform = '';
+    card.style.animation = '';
+  });
 }());
 
 // ── FAQ Accordion & Tabs ──
