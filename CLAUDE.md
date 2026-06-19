@@ -63,11 +63,25 @@ git config user.name "CliniCard Blog Bot"
 git fetch origin main
 git checkout main
 git pull origin main
-# Créer le fichier article, modifier index.html et sitemap.xml
-git add docs/blog/[SLUG].html docs/blog/index.html docs/sitemap.xml
+# Créer le fichier article, modifier docs/blog/index.html et docs/sitemap.xml
+# PUIS régénérer les 3 cartes "blog preview" de la landing à partir de l'index du blog :
+node scripts/update-blog-preview.js
+git add docs/blog/[SLUG].html docs/blog/index.html docs/sitemap.xml docs/index.html
 git commit -m "blog: [TITRE_COURT]"
 git push https://<GH_TOKEN>@github.com/RomainD-prog/clinicard-landing.git main
 ```
 
 Si le push échoue par conflit : `git pull --rebase origin main` puis réessayer.  
 **Ne jamais pousser sur une branche feature pour le blog** — le déploiement ne se ferait pas.
+
+## Blog preview de la landing — automatisé
+
+La section « Méthodes et conseils de révision » de `docs/index.html` affiche les **3 articles les plus récents** du blog. Ces cartes sont **auto-générées** : ne pas les éditer à la main.
+
+À chaque nouvel article (après avoir mis à jour `docs/blog/index.html`), exécuter :
+
+```bash
+node scripts/update-blog-preview.js
+```
+
+Le script lit les 3 premières `<article class="blog-card">` de `docs/blog/index.html` (l'index est ordonné du plus récent au plus ancien) et réécrit le bloc délimité par `<!-- BLOG_PREVIEW:START -->` / `<!-- BLOG_PREVIEW:END -->` dans `docs/index.html`. Il est idempotent (ne réécrit que si le contenu change) et échoue proprement si les marqueurs ou les champs attendus manquent. Penser à inclure `docs/index.html` dans le `git add` qui suit.
